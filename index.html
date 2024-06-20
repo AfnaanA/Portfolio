@@ -38,7 +38,7 @@
         </div>
     </header>
 
-    <section id="about" class="py-5">
+    <section id="about" class="py-5 page-section">
         <div class="container text-center">
             <h2 class="mb-4">About</h2>
             <img src="Profile Pic.jpg" alt="Profile Picture" class="rounded-circle mb-3" style="width: 150px; height: 150px;">
@@ -48,7 +48,7 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-5 bg-light">
+    <section id="projects" class="py-5 bg-light page-section">
         <div class="container text-center">
             <h2 class="mb-4">Projects</h2>
             <div id="projectsCarousel" class="carousel slide" data-ride="carousel">
@@ -144,10 +144,6 @@
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="sr-only">Previous</span>
                 </a>
-                <a class="carousel-control-prev" href="#projectsCarousel" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
                 <a class="carousel-control-next" href="#projectsCarousel" role="button" data-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
@@ -157,14 +153,14 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="py-5">
+    <section id="skills" class="py-5 page-section">
         <div class="container text-center">
             <h2 class="mb-4">Skills</h2>
             <div id="skillsCarousel" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div class="row">
-                            <div class="col-md-3 col-sm-6 mb-4">
+                                                        <div class="col-md-3 col-sm-6 mb-4">
                                 <div class="card h-100">
                                     <div class="card-header bg-transparent text-center">
                                         <i class="fab fa-python fa-3x skill-icon text-dark-green"></i>
@@ -280,7 +276,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-5 bg-dark text-white">
+    <section id="contact" class="py-5 bg-dark text-white page-section">
         <div class="container text-center">
             <h2 class="mb-4">Contact Me</h2>
             <div class="row justify-content-center mb-4">
@@ -316,30 +312,30 @@
     </footer>
 
     <script>
-    // Smooth scrolling for navigation links
-    $(document).ready(function(){
-        $("a.nav-link").on('click', function(event) {
-            if (this.hash !== "") {
-                event.preventDefault();
-                var hash = this.hash;
-                $('html, body').animate({
-                    scrollTop: $(hash).offset().top - 50 // Adjust offset for fixed navbar
-                }, 800, function(){
-                    window.location.hash = hash;
-                });
-            }
-        });
-
-        // Highlight the active section in the navbar
-        $(window).on('scroll', function() {
-            var scrollDistance = $(window).scrollTop();
-            $('.page-section').each(function(i) {
-                if ($(this).position().top <= scrollDistance + 60) { // Adjust for navbar height
-                    $('.navbar-nav a.nav-link.active').removeClass('active');
-                    $('.navbar-nav a.nav-link').eq(i).addClass('active');
+        // Smooth scrolling for navigation links
+        $(document).ready(function() {
+            $("a.nav-link").on('click', function(event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    var hash = this.hash;
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top - $('.navbar').outerHeight() // Adjust offset for fixed navbar
+                    }, 800);
                 }
             });
-        }).scroll();
-    });
-</script>
+
+            // Highlight the active section in the navbar
+            $(window).on('scroll', function() {
+                var scrollDistance = $(window).scrollTop();
+                $('.page-section').each(function(i) {
+                    if ($(this).position().top <= scrollDistance + $('.navbar').outerHeight()) {
+                        $('.navbar-nav a.nav-link.active').removeClass('active');
+                        $('.navbar-nav a.nav-link').eq(i).addClass('active');
+                    }
+                });
+            }).scroll();
+        });
+    </script>
+</body>
+</html>
 
