@@ -1,4 +1,3 @@
-/* styles.css */
 /* General styles */
 body {
     background-color: #F5F5F5;
@@ -71,13 +70,41 @@ h1, h2 {
     color: #333;
 }
 
-.btn-link {
-    color: #4CAF50;
-    padding: 0;
+.btn-outline-success {
+    color: #228B22;
+    border-color: #228B22;
 }
 
-.btn-link:hover {
-    text-decoration: underline;
+.btn-outline-success:hover {
+    background-color: #228B22;
+    color: #FFF;
+}
+
+.btn-outline-secondary {
+    color: #6c757d;
+    border-color: #6c757d;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #6c757d;
+    color: #FFF;
+}
+
+/* Icon styling */
+.skill-icon, .contact-icon {
+    color: #228B22; /* Dark Green */
+}
+
+.skill-icon {
+    margin-bottom: 10px;
+}
+
+.contact-icon {
+    margin-right: 10px;
+}
+
+.text-dark-green {
+    color: #228B22 !important; /* Dark Green */
 }
 
 /* Footer */
@@ -96,7 +123,7 @@ footer {
     margin: 0.5em 0;
 }
 
-#contact img {
+#contact .text-dark-green {
     margin-right: 10px;
 }
 
