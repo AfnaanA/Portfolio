@@ -1,3 +1,4 @@
+/* styles.css */
 /* General styles */
 body {
     background-color: #F5F5F5;
@@ -8,7 +9,7 @@ body {
 }
 
 header {
-    background-color: #007bff;
+    background: linear-gradient(135deg, #72EDF2 10%, #5151E5 100%);
     color: #FFF;
     padding: 3em 0;
     text-align: center;
