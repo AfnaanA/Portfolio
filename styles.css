@@ -1,11 +1,8 @@
-/* General Styles */
+/* styles.css */
 body {
     background-color: #F5F5F5;
     color: #333;
     font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
 }
 
 header {
@@ -34,31 +31,143 @@ nav ul li a {
 
 main {
     padding: 2em;
-    max-width: 800px;
-    margin: 0 auto;
-    background: #fff;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1, h2 {
+    color: #000;
+}
+
+.card {
+    border-radius: 10px;
+}
+
+.card-img-top {
+    border-radius: 10px 10px 0 0;
+}
+
+.card-title {
+    color: #4CAF50;
+}
+
+.card-body p {
+    color: #333;
+}
+
+a.btn-link {
+    color: #4CAF50;
+}
+
+a.btn-link:hover {
+    text-decoration: underline;
 }
 
 footer {
     background-color: #000;
     color: #FFF;
-    text-align: center;
-    padding: 1em 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    text-align: center
 }
 
-h1, h2, h3 {
+/* General styles */
+body {
+    background-color: #F5F5F5;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+}
+
+header {
+    background-color: #000;
+    color: #FFF;
+    padding: 1em;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin-bottom: 1em;
+}
+
+nav ul li {
+    margin: 0 1em;
+}
+
+nav ul li a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #333;
+    text-decoration: underline;
+}
+
+main {
+    padding: 2em;
+}
+
+h1, h2 {
     color: #000;
 }
 
-a {
+/* Card styling */
+.card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+    border-radius: 10px 10px 0 0;
+}
+
+.card-title {
     color: #4CAF50;
 }
 
-iframe {
-    border: none;
-    margin: 20px 0;
+.card-body p {
+    color: #333;
+}
+
+.btn-link {
+    color: #4CAF50;
+    padding: 0;
+}
+
+.btn-link:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #000;
+    color: #FFF;
+    text-align: center;
+    padding: 1em 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        margin-bottom: 1em;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 0.5em 0;
+    }
 }
