@@ -31,7 +31,7 @@
         </div>
     </nav>
 
-    <header id="home" class="text-center py-5 bg-primary text-white header-gradient">
+    <header id="home" class="text-center py-5 header-gradient text-white">
         <div class="container">
             <h1 class="display-4">Welcome to My Portfolio</h1>
             <p class="lead">Data Analyst / Data Scientist</p>
@@ -47,103 +47,239 @@
         </div>
     </section>
 
+    <!-- Projects Section -->
     <section id="projects" class="py-5 bg-light">
         <div class="container text-center">
             <h2 class="mb-4">Projects</h2>
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100">
-                        <img src="images/projects/1.jpg" class="card-img-top" alt="Project 1">
-                        <div class="card-body">
-                            <h5 class="card-title">Project 1</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            <a href="#" class="btn btn-outline-success">Blog Post</a>
-                            <a href="#" class="btn btn-outline-secondary">Source Code</a>
+            <div id="projectsCarousel" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-md-4 mb-4">
+                                <div class="card h-100">
+                                    <div class="card-header bg-transparent text-center">
+                                        <i class="fas fa-heartbeat fa-3x project-icon text-dark-green"></i>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Healthcare Project 1</h5>
+                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                        <a href="#" class="btn btn-outline-success">Blog Post</a>
+                                        <a href="#" class="btn btn-outline-secondary">Source Code</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="card h-100">
+                                    <div class="card-header bg-transparent text-center">
+                                        <i class="fas fa-stethoscope fa-3x project-icon text-dark-green"></i>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Healthcare Project 2</h5>
+                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                        <a href="#" class="btn btn-outline-success">Blog Post</a>
+                                        <a href="#" class="btn btn-outline-secondary">Source Code</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="card h-100">
+                                    <div class="card-header bg-transparent text-center">
+                                        <i class="fas fa-chart-line fa-3x project-icon text-dark-green"></i>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Finance Project 1</h5>
+                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                        <a href="#" class="btn btn-outline-success">Blog Post</a>
+                                        <a href="#" class="btn btn-outline-secondary">Source Code</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-md-4 mb-4">
+                                <div class="card h-100">
+                                    <div class="card-header bg-transparent text-center">
+                                        <i class="fas fa-wallet fa-3x project-icon text-dark-green"></i>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Finance Project 2</h5>
+                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                        <a href="#" class="btn btn-outline-success">Blog Post</a>
+                                        <a href="#" class="btn btn-outline-secondary">Source Code</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="card h-100">
+                                    <div class="card-header bg-transparent text-center">
+                                        <i class="fas fa-bolt fa-3x project-icon text-dark-green"></i>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Energy Project 1</h5>
+                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                        <a href="#" class="btn btn-outline-success">Blog Post</a>
+                                        <a href="#" class="btn btn-outline-secondary">Source Code</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="card h-100">
+                                    <div class="card-header bg-transparent text-center">
+                                        <i class="fas fa-solar-panel fa-3x project-icon text-dark-green"></i>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Energy Project 2</h5>
+                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                        <a href="#" class="btn btn-outline-success">Blog Post</a>
+                                        <a href="#" class="btn btn-outline-secondary">Source Code</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100">
-                        <img src="images/projects/2.jpg" class="card-img-top" alt="Project 2">
-                        <div class="card-body">
-                            <h5 class="card-title">Project 2</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            <a href="#" class="btn btn-outline-success">Blog Post</a>
-                            <a href="#" class="btn btn-outline-secondary">Source Code</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100">
-                        <img src="images/projects/3.jpg" class="card-img-top" alt="Project 3">
-                        <div class="card-body">
-                            <h5 class="card-title">Project 3</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            <a href="#" class="btn btn-outline-success">Blog Post</a>
-                            <a href="#" class="btn btn-outline-secondary">Source Code</a>
-                        </div>
-                    </div>
-                </div>
+                <a class="carousel-control-prev" href="#projectsCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-prev" href="#projectsCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#projectsCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
         </div>
     </section>
 
+    <!-- Skills Section -->
     <section id="skills" class="py-5">
         <div class="container text-center">
             <h2 class="mb-4">Skills</h2>
-            <div class="row">
-                <div class="col-md-3 col-sm-6 mb-4">
-                    <div class="card h-100">
-                        <div class="card-header bg-transparent">
-                            <i class="fab fa-python fa-3x skill-icon text-dark-green"></i>
+            <div id="skillsCarousel" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-md-3 col-sm-6 mb-4">
+                                <div class="card h-100">
+                                    <div class="card-header bg-transparent text-center">
+                                        <i class="fab fa-python fa-3x skill-icon text-dark-green"></i>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Python</h5>
+                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                        <a href="#" class="btn btn-outline-success">Link to course or bootcamp</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 mb-4">
+                                <div class="card h-100">
+                                    <div class="card-header bg-transparent text-center">
+                                        <i class="fas fa-chart-bar fa-3x skill-icon text-dark-green"></i>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Data Visualization</h5>
+                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                        <a href="#" class="btn btn-outline-success">Link to course or bootcamp</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 mb-4">
+                                <div class="card h-100">
+                                    <div class="card-header bg-transparent text-center">
+                                        <i class="fas fa-database fa-3x skill-icon text-dark-green"></i>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">SQL</h5>
+                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                        <a href="#" class="btn btn-outline-success">Link to course or bootcamp</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 mb-4">
+                                <div class="card h-100">
+                                    <div class="card-header bg-transparent text-center">
+                                        <i class="fas fa-comments fa-3x skill-icon text-dark-green"></i>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Data Storytelling</h5>
+                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                        <a href="#" class="btn btn-outline-success">Link to course or bootcamp</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Python</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            <a href="#" class="btn btn-outline-success">Link to course or bootcamp</a>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-md-3 col-sm-6 mb-4">
+                                <div class="card h-100">
+                                    <div class="card-header bg-transparent text-center">
+                                        <i class="fas fa-code fa-3x skill-icon text-dark-green"></i>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Programming</h5>
+                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                        <a href="#" class="btn btn-outline-success">Link to course or bootcamp</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 mb-4">
+                                <div class="card h-100">
+                                    <div class="card-header bg-transparent text-center">
+                                        <i class="fas fa-network-wired fa-3x skill-icon text-dark-green"></i>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Networking</h5>
+                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                        <a href="#" class="btn btn-outline-success">Link to course or bootcamp</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 mb-4">
+                                <div class="card h-100">
+                                    <div class="card-header bg-transparent text-center">
+                                        <i class="fas fa-chart-pie fa-3x skill-icon text-dark-green"></i>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Data Analysis</h5>
+                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                        <a href="#" class="btn btn-outline-success">Link to course or bootcamp</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 mb-4">
+                                <div class="card h-100">
+                                    <div class="card-header bg-transparent text-center">
+                                        <i class="fas fa-project-diagram fa-3x skill-icon text-dark-green"></i>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Project Management</h5>
+                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                        <a href="#" class="btn btn-outline-success">Link to course or bootcamp</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6 mb-4">
-                    <div class="card h-100">
-                        <div class="card-header bg-transparent">
-                            <i class="fas fa-chart-bar fa-3x skill-icon text-dark-green"></i>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Data Visualization</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            <a href="#" class="btn btn-outline-success">Link to course or bootcamp</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 mb-4">
-                    <div class="card h-100">
-                        <div class="card-header bg-transparent">
-                            <i class="fas fa-database fa-3x skill-icon text-dark-green"></i>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">SQL</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            <a href="#" class="btn btn-outline-success">Link to course or bootcamp</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 mb-4">
-                    <div class="card h-100">
-                        <div class="card-header bg-transparent">
-                            <i class="fas fa-comments fa-3x skill-icon text-dark-green"></i>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Data Storytelling</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            <a href="#" class="btn btn-outline-success">Link to course or bootcamp</a>
-                        </div>
-                    </div>
-                </div>
+                <a class="carousel-control-prev" href="#skillsCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#skillsCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
         </div>
     </section>
 
+    <!-- Contact Section -->
     <section id="contact" class="py-5 bg-dark text-white">
         <div class="container text-center">
             <h2 class="mb-4">Contact Me</h2>
@@ -179,21 +315,31 @@
         <p>&copy; 2024 Afnan A. | Designed with ❤️ using Bootstrap</p>
     </footer>
 
-    <script>
-        // Smooth scrolling for navigation links
-        $(document).ready(function(){
-            $("a.nav-link").on('click', function(event) {
-                if (this.hash !== "") {
-                    event.preventDefault();
-                    var hash = this.hash;
-                    $('html, body').animate({
-                        scrollTop: $(hash).offset().top
-                    }, 800, function(){
-                        window.location.hash = hash;
-                    });
+  <script>
+    // Smooth scrolling for navigation links
+    $(document).ready(function(){
+        $("a.nav-link").on('click', function(event) {
+            if (this.hash !== "") {
+                event.preventDefault();
+                var hash = this.hash;
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top - 50 // Adjust offset for fixed navbar
+                }, 800, function(){
+                    window.location.hash = hash;
+                });
+            }
+        });
+
+        // Highlight the active section in the navbar
+        $(window).on('scroll', function() {
+            var scrollDistance = $(window).scrollTop();
+            $('.page-section').each(function(i) {
+                if ($(this).position().top <= scrollDistance + 60) { // Adjust for navbar height
+                    $('.navbar-nav a.nav-link.active').removeClass('active');
+                    $('.navbar-nav a.nav-link').eq(i).addClass('active');
                 }
             });
-        });
-    </script>
-</body>
-</html>
+        }).scroll();
+    });
+</script>
+
