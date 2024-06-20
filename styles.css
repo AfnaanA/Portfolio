@@ -32,11 +32,7 @@ nav ul li a {
     font-weight: bold;
 }
 
-nav ul li a:hover {
-    color: #FFF;
-    text-decoration: underline;
-}
-
+nav ul li a:hover,
 nav ul li a.active {
     color: #FFF;
     text-decoration: underline;
@@ -50,6 +46,11 @@ h1, h2 {
     color: #FFF;
 }
 
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
 /* About section */
 #about img {
     border-radius: 50%;
@@ -61,14 +62,22 @@ h1, h2 {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
 }
 
-.card-img-top {
-    border-radius: 10px 10px 0 0;
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card-header {
+    background-color: #F8F9FA;
+    border-bottom: none;
 }
 
 .card-title {
     color: #4CAF50;
+    font-size: 1.25em;
+    margin-bottom: 0.5em;
 }
 
 .card-body p {
@@ -78,6 +87,7 @@ h1, h2 {
 .btn-outline-success {
     color: #228B22;
     border-color: #228B22;
+    margin-right: 0.5em;
 }
 
 .btn-outline-success:hover {
@@ -112,26 +122,6 @@ h1, h2 {
     color: #228B22 !important; /* Dark Green */
 }
 
-/* Footer */
-footer {
-    background-color: #000;
-    color: #FFF;
-    text-align: center;
-    padding: 1em 0;
-}
-
-/* Contact section */
-#contact p {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0.5em 0;
-}
-
-#contact .text-dark-green {
-    margin-right: 10px;
-}
-
 /* Carousel adjustments */
 .carousel-inner .carousel-item {
     display: flex;
@@ -146,6 +136,29 @@ footer {
 
 .carousel-control-prev-icon, .carousel-control-next-icon {
     background-color: #333;
+    border-radius: 50%;
+    padding: 0.5em;
+}
+
+/* Footer */
+footer {
+    background-color: #000;
+    color: #FFF;
+    text-align: center;
+    padding: 1em 0;
+    font-size: 0.9em;
+}
+
+/* Contact section */
+#contact p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.5em 0;
+}
+
+#contact .text-dark-green {
+    margin-right: 10px;
 }
 
 /* Responsive adjustments */
@@ -166,5 +179,29 @@ footer {
 
     nav ul li {
         margin: 0.5em 0;
+    }
+}
+
+@media (min-width: 768px) {
+    .navbar-brand {
+        font-size: 1.5em;
+    }
+
+    .navbar-nav .nav-item {
+        margin: 0 1em;
+    }
+}
+
+@media (min-width: 992px) {
+    h1 {
+        font-size: 3em;
+    }
+
+    .container h2 {
+        font-size: 2.5em;
+    }
+
+    .lead {
+        font-size: 1.25em;
     }
 }
