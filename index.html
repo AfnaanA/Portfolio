@@ -1,332 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!-- Metadata of the Webpage -->
+    <!-- Character-set Metadata -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Viewport Metadata -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Description Metadata-->
+    <meta name="description" content="Portfolio Website" />
+    <!-- Author Metadata -->
+    <meta name="author" content="Afnan Abdullahi" />
+    <!-- Keyword Metadata -->
+    <meta
+      name="keywords"
+      content="Afnan Abdullahi, Data Scientist, Behavioral Scientist, Afnan Abdullahi Portfolio, Data Science Projects, Afnan Abdullahi Website, Afnan Abdullahi GitHub"
+    />
+    <!-- Webpage Logo -->
+    <link rel="shortcut icon" href="./assets/img/favicon.ico" />
+    <!-- Webpage Title -->
+    <title>Afnan Abdullahi</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <!-- Google Fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@400;700&display=swap">
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <!-- Custom CSS -->
-    <style>
-        body {
-            font-family: 'Open Sans', sans-serif;
-            color: #333333;
-        }
+    <!-- Import CSS: Main Stylesheet -->
+    <link rel="stylesheet" href="./assets/css/main.css" />
+  </head>
 
-        .navbar {
-            background-color: #fff;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            padding: 1rem 2rem;
-        }
-
-        .navbar-brand {
-            font-family: 'Poppins', sans-serif;
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #333333;
-        }
-
-        .navbar-nav .nav-link {
-            color: #333333;
-            margin-left: 1rem;
-            transition: color 0.3s;
-        }
-
-        .navbar-nav .nav-link:hover {
-            color: #007bff;
-        }
-
-        .hero {
-            position: relative;
-            height: 100vh;
-            background: url('https://via.placeholder.com/1500x800') center center/cover no-repeat;
-            color: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-family: 'Poppins', sans-serif;
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .hero p {
-            font-size: 1.25rem;
-            margin-bottom: 2rem;
-        }
-
-        .hero .btn {
-            background-color: #007bff;
-            border: none;
-            padding: 0.75rem 2rem;
-            font-size: 1rem;
-            color: #fff;
-            transition: background-color 0.3s;
-        }
-
-        .hero .btn:hover {
-            background-color: #0056b3;
-        }
-
-        #about, #projects, #resume, #contact {
-            padding: 4rem 2rem;
-        }
-
-        h2 {
-            font-family: 'Poppins', sans-serif;
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        #projects .project-card {
-            background-color: #fff;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            padding: 1rem;
-            margin-bottom: 2rem;
-            text-align: center;
-        }
-
-        #projects .project-card img {
-            width: 100%;
-            height: auto;
-            margin-bottom: 1rem;
-        }
-
-        #projects .project-card h5 {
-            font-family: 'Poppins', sans-serif;
-            font-size: 1.25rem;
-            margin-bottom: 1rem;
-        }
-
-        #projects .project-card p {
-            font-size: 1rem;
-        }
-
-        #contact form {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        #contact form .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        footer {
-            background-color: #f8f9fa;
-            padding: 2rem 0;
-            text-align: center;
-        }
-
-        footer .footer-links, footer .footer-social {
-            margin-bottom: 1rem;
-        }
-
-        footer .footer-links a, footer .footer-social a {
-            color: #333333;
-            margin-right: 1rem;
-            text-decoration: none;
-            font-size: 0.9rem;
-        }
-
-        footer .footer-links a:hover, footer .footer-social a:hover {
-            color: #007bff;
-        }
-
-        footer .footer-text {
-            font-size: 0.8rem;
-            color: #aaa;
-        }
-
-    </style>
-</head>
-
-<body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container">
-            <a class="navbar-brand" href="#">Portfolio</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
-                aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#hero">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#projects">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#resume">Resume</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                </ul>
-                <a href="#contact" class="btn btn-primary">Contact</a>
-            </div>
+  <body>
+    <div id="particles-js">
+      <div class="header">
+        <h1>
+          <span class="site-title">AFNAN ABDULLAHI</span>
+          <span class="site-description">Data Scientist • Machine Learning Engineer • Behavioral Scientist</span>
+        </h1>
+        <div class="header-icons">
+          <a aria-label="My LinkedIn Profile" target="_blank" href="https://www.linkedin.com/in/afnan-abdullahi/">
+            <i class="icon fa fa-linkedin" aria-hidden="true"></i>
+          </a>
+          <a aria-label="My Github Profile" target="_blank" href="https://github.com/afnan-abdullahi">
+            <i class="icon fa fa-github-alt" aria-hidden="true"></i>
+          </a>
+          <a aria-label="Send Email" href="mailto:afnan@example.com" target="_blank">
+            <i class="icon fa fa-envelope"></i>
+          </a>
         </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section id="hero" class="hero">
-        <div>
-            <h1>Welcome to My Portfolio</h1>
-            <p>Explore my projects and skills</p>
-            <a href="#about" class="btn">Learn More</a>
+        <div class="header-links">
+          <a class="link" href="#about" data-scroll>About Me</a>
+          <a class="link" href="#projects" data-scroll>Projects</a>
         </div>
-    </section>
+      </div>
+      <a class="down" href="#about" data-scroll><i class="icon fa fa-chevron-down" aria-hidden="true"></i></a>
+    </div>
 
     <!-- About Section -->
     <section id="about">
-        <h2>About Me</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque imperdiet libero eu neque facilisis. Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <!-- User Introduction-->
+      <div class="user-details">
+        <h1>My Story</h1>
+        <picture>
+          <source
+            type="image/webp"
+            srcset="./assets/img/webp/Professional-Picture-Me.webp"
+            alt="Professional Me"
+            width="20%"
+            style="border-radius: 50%"
+          />
+          <img
+            src="./assets/img/jpg/Professional-Picture-Me.jpg"
+            alt="Professional Me"
+            width="20%"
+            style="border-radius: 50%"
+          />
+        </picture>
+        <p>
+          I am a Data Scientist with a background in Behavioral Science, holding a degree in Psychology with a focus on Neuroscience. My expertise lies in using data-driven approaches to solve complex problems and improve decision-making processes. Currently, I am working on predictive modeling and machine learning projects, with a keen interest in healthcare and finance. My goal is to leverage my analytical skills to contribute to impactful and innovative solutions in the data science field.
+        </p>
+      </div>
+
+      <!-- User Specifics -->
+      <div class="user">
+        <!-- Technology Stack #1: Languages -->
+        <div class="tech">
+          <h2>Languages</h2>
+          <i class="devicon-python-plain colored"></i>
+          <i class="devicon-r-original colored"></i>
+          <i class="devicon-sql-plain-wordmark colored"></i>
+          <p>My preferred languages for data analysis, machine learning, and statistical modeling.</p>
+        </div>
+
+        <!-- Technology Stack #2: Data Science -->
+        <div class="tech">
+          <h2>Data Science</h2>
+          <i class="devicon-tensorflow-original colored"></i>
+          <i class="devicon-pandas-original-wordmark colored"></i>
+          <i class="devicon-numpy-original-wordmark colored"></i>
+          <p>Tools and libraries I use for data preprocessing, modeling, and deep learning.</p>
+        </div>
+
+        <!-- Technology Stack #3: Visualization -->
+        <div class="tech">
+          <h2>Visualization</h2>
+          <i class="devicon-tableau-original colored"></i>
+          <i class="devicon-d3js-plain colored"></i>
+          <i class="devicon-matplotlib-plain colored"></i>
+          <p>Technologies I use to create insightful and interactive data visualizations.</p>
+        </div>
+
+        <!-- Technology Stack #4: Tools -->
+        <div class="tech">
+          <h2>Tools</h2>
+          <i class="devicon-git-plain-wordmark colored"></i>
+          <i class="devicon-jupyter-plain colored"></i>
+          <i class="devicon-docker-plain-wordmark colored"></i>
+          <p>My favorite tools for version control, experimentation, and container orchestration.</p>
+        </div>
+      </div>
     </section>
 
     <!-- Projects Section -->
     <section id="projects">
-        <h2>Projects</h2>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="project-card">
-                    <img src="https://via.placeholder.com/350x200" alt="Project 1">
-                    <h5>Project 1</h5>
-                    <p>A brief description of Project 1.</p>
-                    <a href="#" class="btn btn-outline-primary">Learn More</a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="project-card">
-                    <img src="https://via.placeholder.com/350x200" alt="Project 2">
-                    <h5>Project 2</h5>
-                    <p>A brief description of Project 2.</p>
-                    <a href="#" class="btn btn-outline-primary">Learn More</a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="project-card">
-                    <img src="https://via.placeholder.com/350x200" alt="Project 3">
-                    <h5>Project 3</h5>
-                    <p>A brief description of Project 3.</p>
-                    <a href="#" class="btn btn-outline-primary">Learn More</a>
-                </div>
-            </div>
+      <div class="user-details">
+        <h1>Featured Projects</h1>
+      </div>
+
+      <!-- User Project #1: Predictive Maintenance for Renewable Energy -->
+      <div class="user-projects">
+        <div class="images-right">
+          <picture>
+            <source type="image/webp" srcset="./assets/img/webp/Predictive-Maintenance.webp" alt="Predictive Maintenance" />
+            <img alt="Predictive Maintenance" src="./assets/img/jpg/Predictive-Maintenance.jpg" />
+          </picture>
         </div>
-    </section>
-
-    <!-- Resume Section -->
-    <section id="resume" style="background-color: #f9f9f9;">
-        <h2>Resume</h2>
-        <p>Download my resume to learn more about my professional experience and skills.</p>
-        <a href="resume.pdf" class="btn btn-primary">Download Resume</a>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <form action="#" method="post">
-            <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" class="form-control" id="name" name="name" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" class="form-control" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="message">Message</label>
-                <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Send Message</button>
-        </form>
-        <div class="contact-info">
-            <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
-            <p>Phone: <a href="tel:+1234567890">+123 456 7890</a></p>
-            <div class="social-media-icons">
-                <a href="https://www.linkedin.com/in/yourprofile" target="_blank" title="LinkedIn">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://twitter.com/yourprofile" target="_blank" title="Twitter">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a href="https://github.com/yourprofile" target="_blank" title="GitHub">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://medium.com/@yourprofile" target="_blank" title="Medium">
-                    <i class="fab fa-medium"></i>
-                </a>
-                <a href="https://www.youtube.com/channel/yourprofile" target="_blank" title="YouTube">
-                    <i class="fab fa-youtube"></i>
-                </a>
-            </div>
+        <div class="contents" style="text-align: center">
+          <h3>Predictive Maintenance for Renewable Energy</h3>
+          <div>
+            <img height="32" width="32" src="https://unpkg.com/simple-icons@3.4.0/icons/python.svg" style="filter: invert(73%) sepia(74%) saturate(1552%) hue-rotate(169deg) brightness(109%) contrast(97%)" />
+            &nbsp;
+            <img height="32" width="32" src="https://unpkg.com/simple-icons@3.4.0/icons/tensorflow.svg" style="filter: invert(38%) sepia(27%) saturate(2702%) hue-rotate(329deg) brightness(99%) contrast(100%)" />
+          </div>
+          <p style="text-align: justify">
+            Developed a predictive maintenance system for renewable energy assets using machine learning techniques. The project involved analyzing sensor data to predict equipment failures and schedule maintenance proactively.
+          </p>
+          <a class="project-link" target="_blank" href="https://github.com/afnan-abdullahi/predictive-maintenance">
+            Check it out!
+          </a>
         </div>
-    </section>
+      </div>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    Portfolio
-                </div>
-                <div class="footer-links">
-                    <a href="#about">About</a>
-                    <a href="#projects">Projects</a>
-                    <a href="#resume">Resume</a>
-                    <a href="#contact">Contact</a>
-                </div>
-                <div class="footer-social">
-                    <a href="https://www.linkedin.com/in/yourprofile" target="_blank" title="LinkedIn">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="https://twitter.com/yourprofile" target="_blank" title="Twitter">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="https://github.com/yourprofile" target="_blank" title="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://medium.com/@yourprofile" target="_blank" title="Medium">
-                        <i class="fab fa-medium"></i>
-                    </a>
-                    <a href="https://www.youtube.com/channel/yourprofile" target="_blank" title="YouTube">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="footer-text">
-                &copy; 2024 Your Name. All rights reserved.
-            </div>
+      <!-- User Project #2: Customer Churn Prediction -->
+      <div class="user-projects">
+        <div class="images-left">
+          <picture>
+            <source type="image/webp" srcset="./assets/img/webp/Customer-Churn-Prediction.webp" alt="Customer Churn Prediction" />
+            <img alt="Customer Churn Prediction" src="./assets/img/jpg/Customer-Churn-Prediction.jpg" />
+          </picture>
         </div>
-    </footer>
-
-    <!-- Bootstrap and jQuery scripts -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // Smooth scrolling
-        $('a.nav-link, footer .footer-links a').on('click', function (event) {
-            if (this.hash !== "") {
-                event.preventDefault();
-                var hash = this.hash;
-                $('html, body').animate({
-                    scrollTop: $(hash).offset().top - 60
-                }, 800);
-            }
-        });
-    </script>
-</body>
-
-</html>
-
+        <div class="contents-right" style="text-align: center">
+          <h3>Customer Churn Prediction</h3>
+          <img height="32" width="32" src="https://unpkg.com/simple-icons@3.4.0/icons/python.svg" style="filter: invert(73%) sepia(74%) saturate(1552%) hue-rotate(169deg) brightness(109%) contrast(97%)" />
+          &nbsp;
+          <img height="32" width="32" src="https://unpkg.com/simple-icons@3.4.0/icons/pandas.svg" style="filter: invert(24%) sepia(14%) saturate(2270%) hue-rotate(222deg) brightness(102%) contrast(90%)" />
+          &nbsp;
+          <img height="32" width="32" src="https://unpkg.com/simple-icons@3.4.0/icons/github.svg" />
+          <p style="
