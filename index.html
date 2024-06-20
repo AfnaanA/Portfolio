@@ -1,326 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@400;700&display=swap">
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Custom CSS -->
     <style>
-        /* Custom CSS */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: #333333;
+        }
 
-        /* Navbar */
-        #navbar {
-            background-color: #f8f9fa;
+        .navbar {
+            background-color: #fff;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 1rem 2rem;
         }
 
-        #navbar .navbar-brand {
-            font-size: 1.5em;
+        .navbar-brand {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
             font-weight: bold;
-            color: #000;
+            color: #333333;
         }
 
-        #navbar .nav-link {
-            color: #333;
+        .navbar-nav .nav-link {
+            color: #333333;
+            margin-left: 1rem;
             transition: color 0.3s;
         }
 
-        #navbar .nav-link:hover {
-            color: #28a745;
+        .navbar-nav .nav-link:hover {
+            color: #007bff;
         }
 
-        body {
-            padding-top: 70px;
-            background-color: #fff;
-            color: #333;
-        }
-
-        /* About Section */
-        #about {
-            text-align: center;
-            padding: 50px 20px;
-            background-color: #f8f9fa;
-        }
-
-        #about h2 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            font-weight: bold;
-            text-transform: uppercase;
-            color: #000;
-        }
-
-        .image-container {
-            margin: 0 auto;
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            overflow: hidden;
-            border: 5px solid #ddd;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #e9ecef;
-        }
-
-        .image-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .about-text {
-            max-width: 600px;
-            margin: 20px auto;
-        }
-
-        .about-text p {
-            font-size: 1.1em;
-            line-height: 1.6;
-            margin: 10px 0;
-        }
-
-        /* Projects Section */
-        #projects {
-            padding: 50px 0;
-            background-color: #f8f9fa;
-        }
-
-        #projects h2 {
-            font-size: 2.5em;
-            margin-bottom: 40px;
-            font-weight: bold;
-            text-transform: uppercase;
-            color: #000;
-        }
-
-        .card {
-            margin-bottom: 30px;
-            border: none;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .card-img-top {
-            border-radius: 0;
-        }
-
-        .card-title {
-            font-size: 1.25em;
-            margin-bottom: 10px;
-            color: #28a745;
-        }
-
-        .card-text {
-            font-size: 1em;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-
-        .card-link {
-            color: #28a745;
-            text-decoration: none;
-            margin-right: 10px;
-        }
-
-        .card-link:hover {
-            text-decoration: underline;
-        }
-
-        /* Skills Section */
-        #skills {
-            padding: 50px 0;
-            background-color: #f8f9fa;
-        }
-
-        #skills h2 {
-            font-size: 2.5em;
-            margin-bottom: 40px;
-            font-weight: bold;
-            text-transform: uppercase;
-            color: #000;
-        }
-
-        .skill-card {
-            margin-bottom: 30px;
-        }
-
-        .skill-card i {
-            font-size: 3em;
-            margin-bottom: 20px;
-            color: #1d7b2d;
-        }
-
-        .skill-card h5 {
-            font-size: 1.25em;
-            margin-bottom: 15px;
-            color: #000;
-        }
-
-        .skill-card p {
-            font-size: 1em;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-
-        .skill-link {
-            color: #28a745;
-            text-decoration: none;
-        }
-
-        .skill-link:hover {
-            text-decoration: underline;
-        }
-
-        /* Contact Section */
-        #contact-me {
-            background-color: #2c2c2c;
-            color: #fff;
-            padding: 50px 0;
-        }
-
-        #contact-me h2 {
-            font-size: 2.5em;
-            margin-bottom: 40px;
-            font-weight: bold;
-            text-transform: uppercase;
-            color: #fff;
-        }
-
-        .contact-info {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 20px;
-        }
-
-        .contact-info i {
-            font-size: 1.5em;
-            margin-right: 10px;
-        }
-
-        .contact-info a {
-            font-size: 1.25em;
-            color: #fff;
-            text-decoration: none;
-        }
-
-        .social-media-icons {
-            margin-top: 30px;
-        }
-
-        .social-media-icons a {
-            display: inline-block;
-            width: 50px;
-            height: 50px;
-            background-color: #1d7b2d;
-            border-radius: 50%;
-            margin: 0 10px;
+        .hero {
             position: relative;
-            overflow: hidden;
-        }
-
-        .social-media-icons a i {
-            font-size: 1.5em;
+            height: 100vh;
+            background: url('https://via.placeholder.com/1500x800') center center/cover no-repeat;
             color: #fff;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        .social-media-icons a:hover {
-            background-color: #28a745;
-        }
-
-        .social-media-icons a[title]::after {
-            content: attr(title);
-            display: none;
-            position: absolute;
-            top: 110%;
-            left: 50%;
-            transform: translateX(-50%);
-            white-space: nowrap;
-            background-color: #000;
-            color: #fff;
-            padding: 5px;
-            border-radius: 5px;
-            font-size: 0.9em;
-        }
-
-        .social-media-icons a:hover[title]::after {
-            display: block;
-        }
-
-        @media (max-width: 768px) {
-            .contact-info {
-                flex-direction: column;
-            }
-
-            .social-media-icons a {
-                margin: 10px 5px;
-            }
-        }
-
-        /* Footer */
-        footer {
-            background-color: #000;
-            color: #fff;
-            padding: 40px 0;
-            text-align: center;
-        }
-
-        footer .footer-content {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            text-align: center;
-        }
-
-        footer .footer-links,
-        footer .footer-social {
-            display: flex;
-            align-items: center;
             justify-content: center;
+            align-items: center;
+            text-align: center;
         }
 
-        footer .footer-links a,
-        footer .footer-social a {
+        .hero h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+        }
+
+        .hero .btn {
+            background-color: #007bff;
+            border: none;
+            padding: 0.75rem 2rem;
+            font-size: 1rem;
             color: #fff;
-            margin-right: 15px;
+            transition: background-color 0.3s;
+        }
+
+        .hero .btn:hover {
+            background-color: #0056b3;
+        }
+
+        #about, #projects, #resume, #contact {
+            padding: 4rem 2rem;
+        }
+
+        h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        #projects .project-card {
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 1rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        #projects .project-card img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 1rem;
+        }
+
+        #projects .project-card h5 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        #projects .project-card p {
+            font-size: 1rem;
+        }
+
+        #contact form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        #contact form .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        footer {
+            background-color: #f8f9fa;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        footer .footer-links, footer .footer-social {
+            margin-bottom: 1rem;
+        }
+
+        footer .footer-links a, footer .footer-social a {
+            color: #333333;
+            margin-right: 1rem;
             text-decoration: none;
-            font-size: 0.9em;
+            font-size: 0.9rem;
         }
 
-        footer .footer-social a {
-            font-size: 1.5em;
-        }
-
-        footer .footer-links a:hover,
-        footer .footer-social a:hover {
-            color: #28a745;
-        }
-
-        footer .footer-logo {
-            font-size: 1.5em;
-            font-weight: bold;
-            margin-bottom: 20px;
+        footer .footer-links a:hover, footer .footer-social a:hover {
+            color: #007bff;
         }
 
         footer .footer-text {
-            font-size: 0.8em;
+            font-size: 0.8rem;
             color: #aaa;
         }
 
     </style>
 </head>
-<body>
 
+<body>
     <!-- Navbar -->
-    <nav id="navbar" class="navbar navbar-expand-lg navbar-light fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
             <a class="navbar-brand" href="#">Portfolio</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
@@ -330,149 +160,119 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
+                        <a class="nav-link" href="#hero">Home</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="#about">About</a>
                     </li>
-                                       <li class="nav-item">
+                    <li class="nav-item">
                         <a class="nav-link" href="#projects">Projects</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#skills">Skills</a>
+                        <a class="nav-link" href="#resume">Resume</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact-me">Contact</a>
+                        <a class="nav-link" href="#contact">Contact</a>
                     </li>
                 </ul>
+                <a href="#contact" class="btn btn-primary">Contact</a>
             </div>
         </div>
     </nav>
 
-    <!-- Main content -->
-    <main>
-        <!-- About Section -->
-        <section id="about">
-            <h2>About</h2>
-            <div class="image-container">
-                <img src="images/about.jpg" alt="About image">
-            </div>
-            <div class="about-text">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque imperdiet libero eu neque facilisis.</p>
-                <p>Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta.</p>
-            </div>
-        </section>
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div>
+            <h1>Welcome to My Portfolio</h1>
+            <p>Explore my projects and skills</p>
+            <a href="#about" class="btn">Learn More</a>
+        </div>
+    </section>
 
-        <!-- Projects Section -->
-        <section id="projects" class="container">
-            <h2 class="text-center">Projects</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="images/projects/1.jpg" class="card-img-top" alt="Project 1 Image">
-                        <div class="card-body">
-                            <h5 class="card-title">Project 1</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed nisi erat. Sed et purus ornare.</p>
-                            <a href="#" class="card-link">Blog Post</a>
-                            <a href="#" class="card-link">Source Code</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="images/projects/2.jpg" class="card-img-top" alt="Project 2 Image">
-                        <div class="card-body">
-                            <h5 class="card-title">Project 2</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed nisi erat. Sed et purus ornare.</p>
-                            <a href="#" class="card-link">Blog Post</a>
-                            <a href="#" class="card-link">Source Code</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="images/projects/3.jpg" class="card-img-top" alt="Project 3 Image">
-                        <div class="card-body">
-                            <h5 class="card-title">Project 3</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed nisi erat. Sed et purus ornare.</p>
-                            <a href="#" class="card-link">Blog Post</a>
-                            <a href="#" class="card-link">Source Code</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque imperdiet libero eu neque facilisis. Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </section>
 
-        <!-- Skills Section -->
-        <section id="skills" class="container">
-            <h2 class="text-center">Skills</h2>
-            <div class="row">
-                <div class="col-md-3">
-                    <div class="skill-card text-center">
-                        <i class="fab fa-python"></i>
-                        <h5>Python</h5>
-                        <p>Proficient in Python for data analysis, scripting, and automation. Extensive experience with libraries like Pandas and NumPy.</p>
-                        <a href="#" class="skill-link">Link to course or bootcamp</a>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="skill-card text-center">
-                        <i class="fas fa-chart-bar"></i>
-                        <h5>Data Visualization</h5>
-                        <p>Skilled in creating clear and effective data visualizations using tools such as Matplotlib, Seaborn, and Plotly.</p>
-                        <a href="#" class="skill-link">Link to course or bootcamp</a>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="skill-card text-center">
-                        <i class="fas fa-database"></i>
-                        <h5>SQL</h5>
-                        <p>Experienced in writing complex SQL queries for data extraction, manipulation, and analysis in various database systems.</p>
-                        <a href="#" class="skill-link">Link to course or bootcamp</a>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="skill-card text-center">
-                        <i class="fas fa-book-open"></i>
-                        <h5>Data Storytelling</h5>
-                        <p>Proficient in presenting data-driven insights and narratives through compelling storytelling techniques and visual aids.</p>
-                        <a href="#" class="skill-link">Link to course or bootcamp</a>
-                    </div>
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="project-card">
+                    <img src="https://via.placeholder.com/350x200" alt="Project 1">
+                    <h5>Project 1</h5>
+                    <p>A brief description of Project 1.</p>
+                    <a href="#" class="btn btn-outline-primary">Learn More</a>
                 </div>
             </div>
-        </section>
+            <div class="col-md-4">
+                <div class="project-card">
+                    <img src="https://via.placeholder.com/350x200" alt="Project 2">
+                    <h5>Project 2</h5>
+                    <p>A brief description of Project 2.</p>
+                    <a href="#" class="btn btn-outline-primary">Learn More</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="project-card">
+                    <img src="https://via.placeholder.com/350x200" alt="Project 3">
+                    <h5>Project 3</h5>
+                    <p>A brief description of Project 3.</p>
+                    <a href="#" class="btn btn-outline-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <!-- Contact Section -->
-        <section id="contact-me" class="text-center">
-            <div class="container">
-                <h2>Contact Me</h2>
-                <div class="row justify-content-center">
-                    <div class="col-md-5 contact-info">
-                        <i class="fas fa-envelope"></i>
-                        <a href="mailto:youremail@example.com">youremail@example.com</a>
-                    </div>
-                    <div class="col-md-5 contact-info">
-                        <i class="fas fa-phone"></i>
-                        <a href="tel:+1234567890">+123 456 7890</a>
-                    </div>
-                </div>
-                <div class="social-media-icons">
-                    <a href="https://www.linkedin.com/in/yourprofile" target="_blank" title="LinkedIn">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="https://twitter.com/yourprofile" target="_blank" title="Twitter">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="https://github.com/yourprofile" target="_blank" title="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://medium.com/@yourprofile" target="_blank" title="Medium">
-                        <i class="fab fa-medium"></i>
-                    </a>
-                    <a href="https://www.youtube.com/channel/yourprofile" target="_blank" title="YouTube">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                </div>
+    <!-- Resume Section -->
+    <section id="resume" style="background-color: #f9f9f9;">
+        <h2>Resume</h2>
+        <p>Download my resume to learn more about my professional experience and skills.</p>
+        <a href="resume.pdf" class="btn btn-primary">Download Resume</a>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" name="name" required>
             </div>
-        </section>
-    </main>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+        <div class="contact-info">
+            <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+            <p>Phone: <a href="tel:+1234567890">+123 456 7890</a></p>
+            <div class="social-media-icons">
+                <a href="https://www.linkedin.com/in/yourprofile" target="_blank" title="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://twitter.com/yourprofile" target="_blank" title="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://github.com/yourprofile" target="_blank" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://medium.com/@yourprofile" target="_blank" title="Medium">
+                    <i class="fab fa-medium"></i>
+                </a>
+                <a href="https://www.youtube.com/channel/yourprofile" target="_blank" title="YouTube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer>
@@ -484,8 +284,8 @@
                 <div class="footer-links">
                     <a href="#about">About</a>
                     <a href="#projects">Projects</a>
-                    <a href="#skills">Skills</a>
-                    <a href="#contact-me">Contact</a>
+                    <a href="#resume">Resume</a>
+                    <a href="#contact">Contact</a>
                 </div>
                 <div class="footer-social">
                     <a href="https://www.linkedin.com/in/yourprofile" target="_blank" title="LinkedIn">
@@ -527,4 +327,6 @@
         });
     </script>
 </body>
+
 </html>
+
