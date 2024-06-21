@@ -3,13 +3,105 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #111111;
+    color: #989898;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #222222;
+}
+
+.navbar .navbar-brand, 
+.navbar .nav-link {
+    color: #a5d6a7;
+}
+
+.navbar .nav-link:hover {
+    color: #ffffff;
 }
 
 /* Hero Header Section */
 .hero-header {
     height: 100vh;
     background: url('images/hero-background.jpg') no-repeat center center/cover;
-    position: relative;
+    background-color: #333333;
+    color: #a5d6a7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-header h1 {
+    font-size: 3em;
+}
+
+.hero-header p {
+    font-size: 1.5em;
+}
+
+/* Section Titles */
+.page-section h2 {
+    color: #a5d6a7;
+}
+
+/* About Section */
+#about {
+    background-color: #222222;
+}
+
+#about img {
+    border: 2px solid #123429;
+}
+
+/* Projects Section */
+#projects {
+    background-color: #333333;
+}
+
+#projects .item-desc {
+    background-color: rgba(18, 52, 41, 0.7);
+    color: #a5d6a7;
+}
+
+/* Skills Section */
+#skills {
+    background-color: #222222;
+}
+
+#skills .item-desc {
+    background-color: rgba(52, 52, 52, 0.7);
+    color: #a5d6a7;
+}
+
+/* Contact Section */
+#contact {
+    background-color: #111111;
+}
+
+#contact p, 
+#contact a {
+    color: #a5d6a7;
+}
+
+#contact .fas {
+    color: #123429;
+}
+
+#contact .fab {
+    color: #123429;
+}
+
+#contact a:hover .fas, 
+#contact a:hover .fab {
+    color: #a5d6a7;
+}
+
+/* Footer */
+footer {
+    background-color: #111111;
+    color: #a5d6a7;
 }
 
 /* Owl Carousel Custom Styles */
@@ -25,7 +117,7 @@ body {
     bottom: 20px;
     left: 20px;
     background-color: rgba(0, 0, 0, 0.6);
-    color: white;
+    color: #a5d6a7;
     padding: 10px;
     border-radius: 5px;
 }
@@ -37,7 +129,7 @@ body {
     transform: translateY(-50%);
     background: rgba(0, 0, 0, 0.5);
     border: none;
-    color: white;
+    color: #a5d6a7;
     font-size: 18px;
     padding: 10px;
     cursor: pointer;
@@ -62,23 +154,11 @@ body {
 }
 
 .owl-carousel .owl-dot.active {
-    background: white;
+    background: #a5d6a7;
 }
 
-/* Section Styles */
-.page-section {
-    padding: 60px 0;
-}
-
-.bg-light {
-    background-color: #f8f9fa;
-}
-
-.bg-dark {
-    background-color: #343a40;
-}
-
-/* Contact Section */
-.text-dark-green {
-    color: #28a745;
+/* Additional Styles for the Profile Picture */
+.profile-picture {
+    border-radius: 50%;
+    border: 2px solid #123429;
 }
