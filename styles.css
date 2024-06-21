@@ -7,51 +7,47 @@ body {
     padding: 0;
 }
 
-header {
+/* Hero Header */
+.hero-header {
     background: linear-gradient(135deg, #7e7e7e, #000);
-    color: #FFF;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-banner {
+    background: linear-gradient(135deg, #7e7e7e, #000);
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 3em 0;
     text-align: center;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    padding: 0;
-    margin: 0;
+header h1, header p {
+    color: #FFF;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
 }
 
-nav ul li {
-    margin: 0 1em;
+/* Navbar */
+.navbar {
+    background-color: #333;
 }
 
-nav ul li a {
+.navbar-nav .nav-item .nav-link {
     color: #4CAF50;
-    text-decoration: none;
     font-weight: bold;
 }
 
-nav ul li a:hover,
-nav ul li a.active {
+.navbar-nav .nav-item .nav-link:hover,
+.navbar-nav .nav-item .nav-link.active {
     color: #FFF;
     text-decoration: underline;
 }
 
-main {
-    padding: 2em;
-}
-
-h1, h2 {
-    color: #FFF;
-}
-
-h2 {
-    font-size: 2.5em;
-    margin-bottom: 0.5em;
-}
-
-/* About section */
+/* About Section */
 #about img {
     border-radius: 50%;
     border: 3px solid #333;
@@ -132,7 +128,6 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
 }
 
 .carousel-control-prev, .carousel-control-next {
@@ -154,7 +149,7 @@ footer {
     font-size: 0.9em;
 }
 
-/* Contact section */
+/* Contact Section */
 #contact p {
     display: flex;
     align-items: center;
@@ -210,4 +205,3 @@ footer {
         font-size: 1.25em;
     }
 }
-
