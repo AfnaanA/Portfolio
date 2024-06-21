@@ -57,6 +57,11 @@ h2 {
     border: 3px solid #333;
 }
 
+#about p {
+    text-align: center;
+    color: #333;
+}
+
 /* Card styling */
 .card {
     border-radius: 10px;
@@ -205,3 +210,4 @@ footer {
         font-size: 1.25em;
     }
 }
+
