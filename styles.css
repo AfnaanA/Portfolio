@@ -1,207 +1,84 @@
-/* General styles */
+/* General Styles */
 body {
-    background-color: #F5F5F5;
-    color: #333;
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
-/* Hero Header */
+/* Hero Header Section */
 .hero-header {
-    background: linear-gradient(135deg, #7e7e7e, #000);
-    min-height: 60vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height: 100vh;
+    background: url('images/hero-background.jpg') no-repeat center center/cover;
+    position: relative;
 }
 
-.header-banner {
-    background: linear-gradient(135deg, #7e7e7e, #000);
-    min-height: 60vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 3em 0;
-    text-align: center;
+/* Owl Carousel Custom Styles */
+.owl-carousel .item {
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    position: relative;
 }
 
-header h1, header p {
-    color: #FFF;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+.owl-carousel .item .item-desc {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
 }
 
-/* Navbar */
-.navbar {
-    background-color: #333;
-}
-
-.navbar-nav .nav-item .nav-link {
-    color: #4CAF50;
-    font-weight: bold;
-}
-
-.navbar-nav .nav-item .nav-link:hover,
-.navbar-nav .nav-item .nav-link.active {
-    color: #FFF;
-    text-decoration: underline;
-}
-
-/* About Section */
-#about img {
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel .owl-nav button.owl-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    cursor: pointer;
     border-radius: 50%;
-    border: 3px solid #333;
 }
 
-#about p {
-    text-align: center;
-    color: #333;
+.owl-carousel .owl-nav button.owl-prev {
+    left: 10px;
 }
 
-/* Card styling */
-.card {
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
+.owl-carousel .owl-nav button.owl-next {
+    right: 10px;
 }
 
-.card:hover {
-    transform: translateY(-10px);
-}
-
-.card-header {
-    background-color: #F8F9FA;
-    border-bottom: none;
-}
-
-.card-title {
-    color: #4CAF50;
-    font-size: 1.25em;
-    margin-bottom: 0.5em;
-}
-
-.card-body p {
-    color: #333;
-}
-
-.btn-outline-success {
-    color: #228B22;
-    border-color: #228B22;
-    margin-right: 0.5em;
-}
-
-.btn-outline-success:hover {
-    background-color: #228B22;
-    color: #FFF;
-}
-
-.btn-outline-secondary {
-    color: #6c757d;
-    border-color: #6c757d;
-}
-
-.btn-outline-secondary:hover {
-    background-color: #6c757d;
-    color: #FFF;
-}
-
-/* Icon styling */
-.skill-icon, .project-icon {
-    color: #228B22; /* Dark Green */
-}
-
-.skill-icon {
-    margin-bottom: 10px;
-}
-
-.project-icon {
-    margin-bottom: 10px;
-}
-
-.text-dark-green {
-    color: #228B22 !important; /* Dark Green */
-}
-
-/* Carousel adjustments */
-.carousel-inner .carousel-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.carousel-control-prev, .carousel-control-next {
-    width: 5%;
-}
-
-.carousel-control-prev-icon, .carousel-control-next-icon {
-    background-color: #333;
+.owl-carousel .owl-dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 5px;
+    background: rgba(0, 0, 0, 0.5);
     border-radius: 50%;
-    padding: 0.5em;
 }
 
-/* Footer */
-footer {
-    background-color: #000;
-    color: #FFF;
-    text-align: center;
-    padding: 1em 0;
-    font-size: 0.9em;
+.owl-carousel .owl-dot.active {
+    background: white;
+}
+
+/* Section Styles */
+.page-section {
+    padding: 60px 0;
+}
+
+.bg-light {
+    background-color: #f8f9fa;
+}
+
+.bg-dark {
+    background-color: #343a40;
 }
 
 /* Contact Section */
-#contact p {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0.5em 0;
-}
-
-#contact .text-dark-green {
-    margin-right: 10px;
-}
-
-/* Responsive adjustments */
-@media (max-width: 767px) {
-    .row {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .card {
-        width: 100%;
-        margin-bottom: 1em;
-    }
-
-    nav ul {
-        flex-direction: column;
-    }
-
-    nav ul li {
-        margin: 0.5em 0;
-    }
-}
-
-@media (min-width: 768px) {
-    .navbar-brand {
-        font-size: 1.5em;
-    }
-
-    .navbar-nav .nav-item {
-        margin: 0 1em;
-    }
-}
-
-@media (min-width: 992px) {
-    h1 {
-        font-size: 3em;
-    }
-
-    .container h2 {
-        font-size: 2.5em;
-    }
-
-    .lead {
-        font-size: 1.25em;
-    }
+.text-dark-green {
+    color: #28a745;
 }
