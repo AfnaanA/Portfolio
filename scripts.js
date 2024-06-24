@@ -18,7 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
     dots.forEach((dot, index) => {
         dot.addEventListener('click', () => {
             sections[index].scrollIntoView({ behavior: 'smooth' });
-            // Add the active class to the clicked dot
             dots.forEach(d => d.classList.remove('active'));
             dot.classList.add('active');
         });
@@ -95,22 +94,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initialize carousel display
     updateSkillCarousel(currentSkillIndex);
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-    // Initialize EmailJS with user ID
-    emailjs.init("your_user_id"); // Replace with your EmailJS user ID
-
-    // Handle form submission
-    document.getElementById('contact-form').addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent the default form submission
-
-        // Send the form data using EmailJS
-        emailjs.sendForm('your_service_id', 'your_template_id', this) // Replace with your service ID and template ID
-            .then(function() {
-                alert('Your message has been sent successfully!');
-            }, function(error) {
-                alert('Failed to send the message. Please try again later.');
-            });
-    });
 });
