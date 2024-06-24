@@ -4,262 +4,182 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Afnan A. Portfolio</title>
-    <meta name="description" content="Portfolio of Afnan A., a Data Analyst and Data Scientist showcasing projects and skills.">
-    <meta name="keywords" content="Data Science, Data Analysis, Machine Learning, Afnan A. Portfolio">
-    <meta name="author" content="Afnan A.">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <title>Afnan's Portfolio</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Add in CSS Panel -->
 </head>
 
 <body>
-    <!-- Sidebar Navigation -->
-    <div class="sidebar">
-        <ul class="nav flex-column">
-            <li class="nav-item">
-                <a class="nav-link" href="#home">
-                    <i class="fas fa-home nav-icon"></i>
-                    <span class="nav-text">Home</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#about">
-                    <i class="fas fa-user nav-icon"></i>
-                    <span class="nav-text">About</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#projects">
-                    <i class="fas fa-briefcase nav-icon"></i>
-                    <span class="nav-text">Projects</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#skills">
-                    <i class="fas fa-chart-line nav-icon"></i>
-                    <span class="nav-text">Skills</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#contact">
-                    <i class="fas fa-envelope nav-icon"></i>
-                    <span class="nav-text">Contact</span>
-                </a>
-            </li>
-        </ul>
-    </div>
-
-    <!-- Hero Header Section -->
-    <header id="home" class="hero-header d-flex align-items-center text-white">
-        <div class="container text-center">
-            <h1 class="display-4">Welcome to My Portfolio</h1>
-            <p class="lead">Data Analyst / Data Scientist</p>
+    <!-- Dynamic Fading Header -->
+    <header class="dynamic-header">
+        <div class="logo-container">
+            <img src="Profile%20Pic.jpg" alt="Profile Picture" class="logo"> <!-- Profile Picture -->
+            <h1>Afnan Abdullahi</h1>
+        </div>
+        <p id="greeting" class="greeting-message"></p>
+        <div class="utility-icons">
+            <a href="#contact" title="Contact"><img src="https://img.icons8.com/material-rounded/24/ffffff/contacts.png" alt="Contact"></a>
+            <a href="#resume" title="Resume"><img src="https://img.icons8.com/material-rounded/24/ffffff/open-resume.png" alt="Resume"></a>
         </div>
     </header>
 
-    <!-- About Section -->
-    <section id="about" class="py-5 page-section">
-        <div class="container text-center">
-            <h2 class="mb-4">About</h2>
-            <img src="Profile_Pic.jpg" alt="Profile Picture" class="rounded-circle mb-3" style="width: 150px; height: 150px;">
-            <p class="w-75 mx-auto">I am Afnan A., an innovative data professional with a robust background in engineering and neuroscience, adept at leveraging advanced analytical and quantitative research techniques to drive product and service optimization. Skilled in machine learning, statistical modeling, and data analysis.</p>
-            <p class="w-75 mx-auto">Passionate about harnessing data-driven insights to drive innovation and maximize value in public health, finance, and startup environments.</p>
-        </div>
-    </section>
+    <!-- Vertical Navigation Bar -->
+    <aside class="vertical-nav">
+        <a href="#about" class="dot" title="About">
+            <span class="tooltip">About</span>
+        </a>
+        <a href="#projects" class="dot" title="Projects">
+            <span class="tooltip">Projects</span>
+        </a>
+        <a href="#skills" class="dot" title="Skills">
+            <span class="tooltip">Skills</span>
+        </a>
+        <a href="#resume" class="dot" title="Resume">
+            <span class="tooltip">Resume</span>
+        </a>
+        <a href="#contact" class="dot" title="Contact">
+            <span class="tooltip">Contact</span>
+        </a>
+    </aside>
 
-    <!-- Projects Section -->
-    <section id="projects" class="py-5 bg-light page-section">
-        <div class="container text-center">
-            <h2 class="mb-4">Projects</h2>
-            <div class="owl-carousel custom-carousel owl-theme">
-                <div class="item" style="background-image: url('images/healthcare1.jpg');">
-                    <div class="item-desc">
-                        <h3>Healthcare Project 1</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <a href="#" class="btn btn-outline-success">Blog Post</a>
-                        <a href="#" class="btn btn-outline-secondary">Source Code</a>
-                    </div>
+    <!-- Main Content Sections -->
+    <main>
+        <section id="about" class="light-green">
+            <h1>About Me</h1>
+            <p>Contrary to popular belief, great opportunities don’t just rely on sheer luck...</p>
+        </section>
+
+        <section id="projects" class="projects-carousel">
+            <h1>Projects</h1>
+            <div class="carousel-container">
+                <div class="detail-section">
+                    <h2 id="project-title">Select a Project</h2>
+                    <p id="project-description">Details about the selected project will appear here.</p>
                 </div>
-                <div class="item" style="background-image: url('images/healthcare2.jpg');">
-                    <div class="item-desc">
-                        <h3>Healthcare Project 2</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <a href="#" class="btn btn-outline-success">Blog Post</a>
-                        <a href="#" class="btn btn-outline-secondary">Source Code</a>
+                <div class="carousel">
+                    <div class="carousel-item" data-title="Project 1" data-description="Details for Project 1">
+                        <img src="https://via.placeholder.com/600x400" alt="Project 1">
                     </div>
-                </div>
-                <div class="item" style="background-image: url('images/finance1.jpg');">
-                    <div class="item-desc">
-                        <h3>Finance Project 1</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <a href="#" class="btn btn-outline-success">Blog Post</a>
-                        <a href="#" class="btn btn-outline-secondary">Source Code</a>
+                    <div class="carousel-item" data-title="Project 2" data-description="Details for Project 2">
+                        <img src="https://via.placeholder.com/600x400" alt="Project 2">
                     </div>
-                </div>
-                <div class="item" style="background-image: url('images/finance2.jpg');">
-                    <div class="item-desc">
-                        <h3>Finance Project 2</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <a href="#" class="btn btn-outline-success">Blog Post</a>
-                        <a href="#" class="btn btn-outline-secondary">Source Code</a>
-                    </div>
-                </div>
-                <div class="item" style="background-image: url('images/energy1.jpg');">
-                    <div class="item-desc">
-                        <h3>Energy Project 1</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <a href="#" class="btn btn-outline-success">Blog Post</a>
-                        <a href="#" class="btn btn-outline-secondary">Source Code</a>
-                    </div>
-                </div>
-                <div class="item" style="background-image: url('images/energy2.jpg');">
-                    <div class="item-desc">
-                        <h3>Energy Project 2</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <a href="#" class="btn btn-outline-success">Blog Post</a>
-                        <a href="#" class="btn btn-outline-secondary">Source Code</a>
+                    <div class="carousel-item" data-title="Project 3" data-description="Details for Project 3">
+                        <img src="https://via.placeholder.com/600x400" alt="Project 3">
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+            <div class="slide-bar">
+                <div class="slide-indicator" data-index="0"></div>
+                <div class="slide-indicator" data-index="1"></div>
+                <div class="slide-indicator" data-index="2"></div>
+            </div>
+        </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="py-5 page-section">
-        <div class="container text-center">
-            <h2 class="mb-4">Skills</h2>
-            <div class="owl-carousel custom-carousel owl-theme">
-                <div class="item" style="background-image: url('images/skills1.jpg');">
-                    <div class="item-desc">
-                        <h3>Python</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <a href="#" class="btn btn-outline-success">Link to course or bootcamp</a>
-                    </div>
+        <section id="skills" class="skills-carousel">
+            <h1>Skills</h1>
+            <div class="carousel">
+                <div class="skill-item">
+                    <img src="https://img.icons8.com/ios-filled/100/4CAF50/combo-chart.png" alt="Data Visualization">
+                    <p>Data Visualization</p>
                 </div>
-                <div class="item" style="background-image: url('images/skills2.jpg');">
-                    <div class="item-desc">
-                        <h3>Data Visualization</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <a href="#" class="btn btn-outline-success">Link to course or bootcamp</a>
-                    </div>
+                <div class="skill-item">
+                    <img src="https://img.icons8.com/ios-filled/100/4CAF50/brain.png" alt="Machine Learning">
+                    <p>Machine Learning</p>
                 </div>
-                <div class="item" style="background-image: url('images/skills3.jpg');">
-                    <div class="item-desc">
-                        <h3>SQL</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <a href="#" class="btn btn-outline-success">Link to course or bootcamp</a>
-                    </div>
+                <div class="skill-item">
+                    <img src="https://img.icons8.com/ios-filled/100/4CAF50/source-code.png" alt="Programming">
+                    <p>Programming</p>
                 </div>
-                <div class="item" style="background-image: url('images/skills4.jpg');">
-                    <div class="item-desc">
-                        <h3>Data Storytelling</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <a href="#" class="btn btn-outline-success">Link to course or bootcamp</a>
-                    </div>
+                <div class="skill-item">
+                    <img src="https://img.icons8.com/ios-filled/100/4CAF50/statistics.png" alt="Probability and Statistics">
+                    <p>Probability and Statistics</p>
                 </div>
-                <div class="item" style="background-image: url('images/skills5.jpg');">
-                    <div class="item-desc">
-                        <h3>Programming</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <a href="#" class="btn btn-outline-success">Link to course or bootcamp</a>
-                    </div>
+                <div class="skill-item">
+                    <img src="https://img.icons8.com/ios-filled/100/4CAF50/neural-network.png" alt="Deep Learning">
+                    <p>Deep Learning</p>
                 </div>
-                <div class="item" style="background-image: url('images/skills6.jpg');">
-                    <div class="item-desc">
-                        <h3>Networking</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <a href="#" class="btn btn-outline-success">Link to course or bootcamp</a>
-                    </div>
+                <div class="skill-item">
+                    <img src="https://img.icons8.com/ios-filled/100/4CAF50/data-configuration.png" alt="Data Wrangling">
+                    <p>Data Wrangling</p>
+                </div>
+                <div class="skill-item">
+                    <img src="https://img.icons8.com/ios-filled/100/4CAF50/data-sheet.png" alt="Data Manipulation and Analysis">
+                    <p>Data Manipulation and Analysis</p>
+                </div>
+                <div class="skill-item">
+                    <img src="https://img.icons8.com/ios-filled/100/4CAF50/mind-map.png" alt="Curiosity and Lifelong Learning">
+                    <p>Curiosity and Lifelong Learning</p>
+                </div>
+                <div class="skill-item">
+                    <img src="https://img.icons8.com/ios-filled/100/4CAF50/balance-scale.png" alt="Ethical Awareness">
+                    <p>Ethical Awareness</p>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-5 bg-dark text-white page-section">
-        <div class="container text-center">
-            <h2 class="mb-4">Contact Me</h2>
-        <div class="row justify-content-center mb-4">
-                <div class="col-md-6">
-                    <p><i class="fas fa-envelope text-dark-green"></i> afnan.abdullahi375@gmail.com</p>
-                    <p><i class="fas fa-phone-alt text-dark-green"></i> +1 (612) 461-6083</p>
-                </div>
+            <div class="slide-bar">
+                <button class="prev-btn">‹</button>
+                <button class="next-btn">›</button>
             </div>
-            <div class="row justify-content-center">
-                <div class="col-md-6 d-flex justify-content-around">
-                    <a href="https://www.linkedin.com/in/afnanabdullahi/" target="_blank" class="text-white" title="LinkedIn">
-                        <i class="fab fa-linkedin fa-2x text-dark-green"></i>
-                    </a>
-                    <a href="https://github.com/AfnanAbdullahi" target="_blank" class="text-white" title="GitHub">
-                        <i class="fab fa-github fa-2x text-dark-green"></i>
-                    </a>
-                    <a href="https://twitter.com" target="_blank" class="text-white" title="Twitter">
-                        <i class="fab fa-twitter fa-2x text-dark-green"></i>
-                    </a>
-                    <a href="https://medium.com" target="_blank" class="text-white" title="Medium">
-                        <i class="fab fa-medium fa-2x text-dark-green"></i>
-                    </a>
-                    <a href="https://youtube.com" target="_blank" class="text-white" title="YouTube">
-                        <i class="fab fa-youtube fa-2x text-dark-green"></i>
-                    </a>
-                </div>
+        </section>
+
+        <section id="resume" class="grey-green">
+            <h1>Resume</h1>
+            <div class="resume-container">
+                <a href="Afnan_Resume.pdf" download class="download-link">Download Resume</a>
+                <iframe src="Afnan_Resume.pdf" frameborder="0" class="resume-viewer"></iframe>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <footer class="bg-dark text-white text-center py-3">
-        <p>&copy; 2024 Afnan A. | Designed with ❤️ using Bootstrap</p>
-    </footer>
+        <section id="contact" class="dark-grey">
+            <h1>Contact Me</h1>
+            <div class="contact-container">
+                <form id="contact-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
 
-    <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
-    <script>
-        // Smooth scrolling for navigation links
-        $(document).ready(function () {
-            $("a.nav-link").on('click', function (event) {
-                if (this.hash !== "") {
-                    event.preventDefault();
-                    var hash = this.hash;
-                    $('html, body').animate({
-                        scrollTop: $(hash).offset().top - $('.sidebar').outerHeight() // Adjust offset for fixed sidebar
-                    }, 800);
-                }
-            });
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
 
-            // Highlight the active section in the sidebar
-            $(window).on('scroll', function () {
-                var scrollDistance = $(window).scrollTop();
-                $('.page-section').each(function (i) {
-                    if ($(this).position().top <= scrollDistance + $('.sidebar').outerHeight()) {
-                        $('.sidebar .nav-link.active').removeClass('active');
-                        $('.sidebar .nav-link').eq(i).addClass('active');
-                    }
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject" required>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+
+                    <button type="submit" class="submit-btn">Send</button>
+                </form>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="social-links">
+                <a href="https://github.com/yourprofile" target="_blank" title="GitHub">
+                    <img src="https://img.icons8.com/ios-glyphs/30/4CAF50/github.png" alt="GitHub">
+                </a>
+                <a href="https://linkedin.com/in/yourprofile" target="_blank" title="LinkedIn">
+                    <img src="https://img.icons8.com/ios-glyphs/30/4CAF50/linkedin.png" alt="LinkedIn">
+                </a>
+            </div>
+            <p>&copy; 2024 Afnan Abdullahi | Designed with <span class="heart">❤️</span> using Bootstrap</p>
+        </footer>
+    </main>
+
+    <script src="scripts.js"></script> <!-- Add in JavaScript Panel -->
+    <script type="text/javascript">
+        // Initialize EmailJS with user ID
+        (function() {
+            emailjs.init("your_user_id"); // Replace with your EmailJS user ID
+        })();
+
+        // Handle form submission
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Send the form data using EmailJS
+            emailjs.sendForm('your_service_id', 'your_template_id', this) // Replace with your service ID and template ID
+                .then(function() {
+                    alert('Your message has been sent successfully!');
+                }, function(error) {
+                    alert('Failed to send the message. Please try again later.');
                 });
-            }).scroll();
-
-            // Owl Carousel initialization
-            $(".custom-carousel").owlCarousel({
-                items: 3,
-                loop: true,
-                margin: 10,
-                autoHeight: true,
-                nav: true,
-                dots: true,
-                autoplay: true,
-                autoplayTimeout: 5000,
-                autoplayHoverPause: true
-            });
-
-            // Active class toggle on click
-            $(".custom-carousel .item").click(function () {
-                $(".custom-carousel .item").not($(this)).removeClass("active");
-                $(this).toggleClass("active");
-            });
         });
     </script>
 </body>
