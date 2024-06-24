@@ -40,14 +40,14 @@ body, html {
 }
 
 .dynamic-header .logo {
-    height: 60px; /* Adjusted logo size */
-    width: 60px;
+    height: 40px; /* Smaller logo */
+    width: 40px;
     border-radius: 50%;
 }
 
 .dynamic-header h1 {
     color: white;
-    font-size: 1.5em; /* Adjusted text size */
+    font-size: 1.2em; /* Smaller text */
     margin: 0;
 }
 
@@ -67,8 +67,15 @@ body, html {
 }
 
 .dynamic-header .utility-icons img {
-    height: 0; /* Hide icons */
-    width: 0;
+    height: 20px; /* Smaller icons */
+    width: 20px;
+    filter: invert(1);
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.dynamic-header .utility-icons img:hover {
+    transform: scale(1.1);
 }
 
 /* Vertical Navigation */
@@ -265,8 +272,8 @@ body, html {
 
 /* Sections with New Color Scheme */
 section {
-    padding: 50px 20px; /* Reduced padding to reduce empty space */
-    min-height: 80vh; /* Adjusted minimum height */
+    padding: 100px 20px;
+    min-height: 100vh;
     transition: background-color 0.5s ease-in-out;
 }
 
@@ -297,89 +304,3 @@ section h1, section p {
     color: #333;
 }
 
-/* Contact Form Styles */
-.contact-container {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-}
-
-.contact-container form {
-    width: 100%;
-    max-width: 600px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.contact-container form label {
-    font-size: 1em;
-    color: #fff;
-}
-
-.contact-container form input,
-.contact-container form textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1em;
-}
-
-.contact-container form input:focus,
-.contact-container form textarea:focus {
-    outline: none;
-    border-color: #666;
-}
-
-.contact-container form .submit-btn {
-    background: #333;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
-    transition: background-color 0.3s;
-    width: 100px; /* Adjusted width to shrink the button */
-    align-self: center; /* Center the button */
-}
-
-.contact-container form .submit-btn:hover {
-    background: #555;
-}
-
-/* Footer */
-.footer {
-    background: #333; /* Dark color for footer */
-    color: white;
-    text-align: center;
-    padding: 20px;
-    position: relative;
-}
-
-.footer .social-links {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-bottom: 10px;
-}
-
-.footer .social-links a {
-    color: white;
-    text-decoration: none;
-}
-
-.footer .social-links img {
-    width: 30px;
-    height: 30px;
-}
-
-.footer p {
-    margin: 0;
-    font-size: 0.9em;
-}
-
-.footer .heart {
-    color: red;
-}
