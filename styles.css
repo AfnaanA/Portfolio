@@ -214,60 +214,44 @@ body, html {
     align-items: center;
 }
 
-.skills-carousel .carousel {
+.skills-carousel .carousel-container {
     display: flex;
-    overflow-x: hidden; /* Hide horizontal scrollbar */
-    scroll-snap-type: x mandatory;
-    width: 600px; /* Width to show two skills at a time */
-    justify-content: center;
-    position: relative; /* For navigation button positioning */
+    align-items: center;
+    max-width: 1000px; /* Set max width */
+    margin: 0 auto;
 }
 
-.skill-item {
-    flex: 0 0 48%; /* Adjust to fit two items, with space between */
-    scroll-snap-align: center;
-    text-align: center;
-    border: 2px solid #fff; /* Polaroid border */
-    background: #fff;
+.skills-carousel .detail-section {
+    width: 30%; /* Takes 30% of the width */
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    margin: 0 10px; /* Margin for spacing */
-}
-
-.skill-item img {
-    width: 80px; /* Icon size */
-    height: 80px; /* Icon size */
-    margin-bottom: 10px;
-}
-
-.skill-item p {
-    font-size: 1em;
     color: #333;
 }
 
-.skills-carousel .slide-bar {
-    margin-top: 20px;
+.skills-carousel .carousel {
+    width: 70%; /* Takes 70% of the width */
     display: flex;
-    justify-content: space-between;
-    width: 150px; /* Width for button alignment */
+    overflow-x: scroll;
+    gap: 20px;
+    padding: 20px;
+    scroll-snap-type: x mandatory;
 }
 
-.skills-carousel .slide-bar .prev-btn,
-.skills-carousel .slide-bar .next-btn {
-    background: #333;
-    color: #fff;
-    border: none;
-    padding: 5px 10px;
+.skills-carousel .carousel-item {
+    flex: 0 0 auto;
+    width: 300px; /* Adjust the width as needed */
+    scroll-snap-align: center;
+    position: relative;
+    transition: transform 0.3s;
     cursor: pointer;
-    border-radius: 50%;
-    font-size: 1.2em;
-    transition: background-color 0.3s;
 }
 
-.skills-carousel .slide-bar .prev-btn:hover,
-.skills-carousel .slide-bar .next-btn:hover {
-    background: #555;
+.skills-carousel .carousel-item:hover {
+    transform: scale(1.05);
+}
+
+.skills-carousel .carousel-item img {
+    width: 100%;
+    border-radius: 10px;
 }
 
 /* Sections with New Color Scheme */
@@ -303,4 +287,3 @@ section h1, section p {
     text-align: center;
     color: #333;
 }
-
