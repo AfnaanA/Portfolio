@@ -45,10 +45,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Handle carousel functionality for projects
-    const carouselItems = document.querySelectorAll('.carousel-item');
+    const carouselItems = document.querySelectorAll('.projects-carousel .carousel-item');
     const projectTitle = document.getElementById('project-title');
     const projectDescription = document.getElementById('project-description');
-    const slideIndicators = document.querySelectorAll('.slide-indicator');
+    const projectIndicators = document.querySelectorAll('.projects-carousel .slide-indicator');
 
     carouselItems.forEach((item, index) => {
         item.addEventListener('click', () => {
@@ -56,43 +56,45 @@ document.addEventListener('DOMContentLoaded', () => {
             projectDescription.textContent = item.getAttribute('data-description');
             carouselItems.forEach(i => i.classList.remove('active'));
             item.classList.add('active');
-            slideIndicators.forEach(i => i.classList.remove('active'));
-            slideIndicators[index].classList.add('active');
+            projectIndicators.forEach(i => i.classList.remove('active'));
+            projectIndicators[index].classList.add('active');
         });
     });
 
-    slideIndicators.forEach((indicator, index) => {
+    projectIndicators.forEach((indicator, index) => {
         indicator.addEventListener('click', () => {
             carouselItems[index].scrollIntoView({ behavior: 'smooth', inline: 'center' });
             carouselItems.forEach(i => i.classList.remove('active'));
             carouselItems[index].classList.add('active');
-            slideIndicators.forEach(i => i.classList.remove('active'));
+            projectIndicators.forEach(i => i.classList.remove('active'));
             indicator.classList.add('active');
         });
     });
 
-    // Skills Carousel Navigation
-    const skillItems = document.querySelectorAll('.skills-carousel .carousel .skill-item');
-    const prevBtn = document.querySelector('.skills-carousel .slide-bar .prev-btn');
-    const nextBtn = document.querySelector('.skills-carousel .slide-bar .next-btn');
-    let currentSkillIndex = 0;
+    // Handle carousel functionality for skills
+    const skillItems = document.querySelectorAll('.skills-carousel .carousel-item');
+    const skillTitle = document.getElementById('skill-title');
+    const skillDescription = document.getElementById('skill-description');
+    const skillIndicators = document.querySelectorAll('.skills-carousel .slide-indicator');
 
-    function updateSkillCarousel(index) {
-        skillItems.forEach((item, i) => {
-            item.style.display = (i === index || i === index + 1) ? 'block' : 'none';
+    skillItems.forEach((item, index) => {
+        item.addEventListener('click', () => {
+            skillTitle.textContent = item.getAttribute('data-title');
+            skillDescription.textContent = item.getAttribute('data-description');
+            skillItems.forEach(i => i.classList.remove('active'));
+            item.classList.add('active');
+            skillIndicators.forEach(i => i.classList.remove('active'));
+            skillIndicators[index].classList.add('active');
         });
-    }
-
-    prevBtn.addEventListener('click', () => {
-        currentSkillIndex = (currentSkillIndex - 2 + skillItems.length) % skillItems.length;
-        updateSkillCarousel(currentSkillIndex);
     });
 
-    nextBtn.addEventListener('click', () => {
-        currentSkillIndex = (currentSkillIndex + 2) % skillItems.length;
-        updateSkillCarousel(currentSkillIndex);
+    skillIndicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => {
+            skillItems[index].scrollIntoView({ behavior: 'smooth', inline: 'center' });
+            skillItems.forEach(i => i.classList.remove('active'));
+            skillItems[index].classList.add('active');
+            skillIndicators.forEach(i => i.classList.remove('active'));
+            indicator.classList.add('active');
+        });
     });
-
-    // Initialize carousel display
-    updateSkillCarousel(currentSkillIndex);
 });
