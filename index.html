@@ -1,24 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Afnan's Portfolio</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Add in CSS Panel -->
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
     <!-- Dynamic Fading Header -->
     <header class="dynamic-header">
         <div class="logo-container">
-            <img src="Profile%20Pic.jpg" alt="Profile Picture" class="logo"> <!-- Profile Picture -->
+            <img src="Profile%20Pic.jpg" alt="Profile Picture" class="logo">
             <h1>Afnan Abdullahi</h1>
         </div>
         <p id="greeting" class="greeting-message"></p>
         <div class="utility-icons">
-            <a href="#contact" title="Contact"><img src="https://img.icons8.com/material-rounded/24/ffffff/contacts.png" alt="Contact"></a>
-            <a href="#resume" title="Resume"><img src="https://img.icons8.com/material-rounded/24/ffffff/open-resume.png" alt="Resume"></a>
+            <a href="#contact" title="Contact"><img src="https://via.placeholder.com/20" alt="Contact"></a>
+            <a href="#" title="Search"><img src="https://via.placeholder.com/20" alt="Search"></a>
         </div>
     </header>
 
@@ -78,41 +76,14 @@
             <h1>Skills</h1>
             <div class="carousel">
                 <div class="skill-item">
-                    <img src="https://img.icons8.com/ios-filled/100/4CAF50/combo-chart.png" alt="Data Visualization">
+                    <img src="https://img.icons8.com/color/96/000000/combo-chart.png" alt="Data Visualization">
                     <p>Data Visualization</p>
                 </div>
                 <div class="skill-item">
-                    <img src="https://img.icons8.com/ios-filled/100/4CAF50/brain.png" alt="Machine Learning">
+                    <img src="https://img.icons8.com/color/96/000000/artificial-intelligence.png" alt="Machine Learning">
                     <p>Machine Learning</p>
                 </div>
-                <div class="skill-item">
-                    <img src="https://img.icons8.com/ios-filled/100/4CAF50/source-code.png" alt="Programming">
-                    <p>Programming</p>
-                </div>
-                <div class="skill-item">
-                    <img src="https://img.icons8.com/ios-filled/100/4CAF50/statistics.png" alt="Probability and Statistics">
-                    <p>Probability and Statistics</p>
-                </div>
-                <div class="skill-item">
-                    <img src="https://img.icons8.com/ios-filled/100/4CAF50/neural-network.png" alt="Deep Learning">
-                    <p>Deep Learning</p>
-                </div>
-                <div class="skill-item">
-                    <img src="https://img.icons8.com/ios-filled/100/4CAF50/data-configuration.png" alt="Data Wrangling">
-                    <p>Data Wrangling</p>
-                </div>
-                <div class="skill-item">
-                    <img src="https://img.icons8.com/ios-filled/100/4CAF50/data-sheet.png" alt="Data Manipulation and Analysis">
-                    <p>Data Manipulation and Analysis</p>
-                </div>
-                <div class="skill-item">
-                    <img src="https://img.icons8.com/ios-filled/100/4CAF50/mind-map.png" alt="Curiosity and Lifelong Learning">
-                    <p>Curiosity and Lifelong Learning</p>
-                </div>
-                <div class="skill-item">
-                    <img src="https://img.icons8.com/ios-filled/100/4CAF50/balance-scale.png" alt="Ethical Awareness">
-                    <p>Ethical Awareness</p>
-                </div>
+                <!-- Add more skill items as needed -->
             </div>
             <div class="slide-bar">
                 <button class="prev-btn">‹</button>
@@ -158,30 +129,10 @@
                     <img src="https://img.icons8.com/ios-glyphs/30/4CAF50/linkedin.png" alt="LinkedIn">
                 </a>
             </div>
-            <p>&copy; 2024 Afnan Abdullahi | Designed with <span class="heart">❤️</span> using Bootstrap</p>
+            <p>&copy; 2024 Afnan Abdullahi | Designed with <span class="heart">❤️</span></p>
         </footer>
     </main>
 
-    <script src="scripts.js"></script> <!-- Add in JavaScript Panel -->
-    <script type="text/javascript">
-        // Initialize EmailJS with user ID
-        (function() {
-            emailjs.init("your_user_id"); // Replace with your EmailJS user ID
-        })();
-
-        // Handle form submission
-        document.getElementById('contact-form').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent the default form submission
-
-            // Send the form data using EmailJS
-            emailjs.sendForm('your_service_id', 'your_template_id', this) // Replace with your service ID and template ID
-                .then(function() {
-                    alert('Your message has been sent successfully!');
-                }, function(error) {
-                    alert('Failed to send the message. Please try again later.');
-                });
-        });
-    </script>
+    <script src="scripts.js"></script> <!-- JavaScript File -->
 </body>
-
 </html>
