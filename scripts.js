@@ -72,42 +72,27 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Skills Carousel Navigation
-    const prevBtn = document.querySelector('.prev-btn');
-    const nextBtn = document.querySelector('.next-btn');
-    const carousel = document.querySelector('.skills-carousel .carousel');
-    let scrollAmount = 0;
+    const skillItems = document.querySelectorAll('.skills-carousel .carousel .skill-item');
+    const prevBtn = document.querySelector('.skills-carousel .slide-bar .prev-btn');
+    const nextBtn = document.querySelector('.skills-carousel .slide-bar .next-btn');
+    let currentSkillIndex = 0;
 
-    nextBtn.addEventListener('click', () => {
-        scrollAmount += carousel.clientWidth / 2;
-        carousel.scrollTo({
-            top: 0,
-            left: scrollAmount,
-            behavior: 'smooth'
+    function updateSkillCarousel(index) {
+        skillItems.forEach((item, i) => {
+            item.style.display = (i === index || i === index + 1) ? 'block' : 'none';
         });
-    });
+    }
 
     prevBtn.addEventListener('click', () => {
-        scrollAmount -= carousel.clientWidth / 2;
-        carousel.scrollTo({
-            top: 0,
-            left: scrollAmount,
-            behavior: 'smooth'
-        });
+        currentSkillIndex = (currentSkillIndex - 2 + skillItems.length) % skillItems.length;
+        updateSkillCarousel(currentSkillIndex);
     });
 
-    // Initialize EmailJS with user ID
-    emailjs.init("your_user_id"); // Replace with your EmailJS user ID
-
-    // Handle form submission
-    document.getElementById('contact-form').addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent the default form submission
-
-        // Send the form data using EmailJS
-        emailjs.sendForm('your_service_id', 'your_template_id', this) // Replace with your service ID and template ID
-            .then(function() {
-                alert('Your message has been sent successfully!');
-            }, function(error) {
-                alert('Failed to send the message. Please try again later.');
-            });
+    nextBtn.addEventListener('click', () => {
+        currentSkillIndex = (currentSkillIndex + 2) % skillItems.length;
+        updateSkillCarousel(currentSkillIndex);
     });
+
+    // Initialize carousel display
+    updateSkillCarousel(currentSkillIndex);
 });
