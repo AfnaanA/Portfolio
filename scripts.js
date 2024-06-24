@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Handle dynamic greeting based on time of day
     const greeting = document.getElementById('greeting');
     const hours = new Date().getHours();
 
@@ -10,12 +11,14 @@ document.addEventListener('DOMContentLoaded', () => {
         greeting.textContent = 'Good Evening!';
     }
 
+    // Handle vertical navigation scroll and active state
     const dots = document.querySelectorAll('.vertical-nav .dot');
     const sections = document.querySelectorAll('main section');
 
     dots.forEach((dot, index) => {
         dot.addEventListener('click', () => {
             sections[index].scrollIntoView({ behavior: 'smooth' });
+            // Add the active class to the clicked dot
             dots.forEach(d => d.classList.remove('active'));
             dot.classList.add('active');
         });
@@ -32,6 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
         dots.forEach(dot => dot.classList.remove('active'));
         dots[currentIndex].classList.add('active');
 
+        // Dynamic header background change on scroll
         const header = document.querySelector('.dynamic-header');
         if (window.scrollY > 50) {
             header.classList.add('scrolled');
@@ -40,6 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Handle carousel functionality for projects
     const carouselItems = document.querySelectorAll('.carousel-item');
     const projectTitle = document.getElementById('project-title');
     const projectDescription = document.getElementById('project-description');
@@ -66,26 +71,43 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    const skillItems = document.querySelectorAll('.skills-carousel .carousel .skill-item');
-    const prevBtn = document.querySelector('.skills-carousel .slide-bar .prev-btn');
-    const nextBtn = document.querySelector('.skills-carousel .slide-bar .next-btn');
-    let currentSkillIndex = 0;
-
-    function updateSkillCarousel(index) {
-        skillItems.forEach((item, i) => {
-            item.style.display = (i === index || i === index + 1) ? 'block' : 'none';
-        });
-    }
-
-    prevBtn.addEventListener('click', () => {
-        currentSkillIndex = (currentSkillIndex - 2 + skillItems.length) % skillItems.length;
-        updateSkillCarousel(currentSkillIndex);
-    });
+    // Skills Carousel Navigation
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    const carousel = document.querySelector('.skills-carousel .carousel');
+    let scrollAmount = 0;
 
     nextBtn.addEventListener('click', () => {
-        currentSkillIndex = (currentSkillIndex + 2) % skillItems.length;
-        updateSkillCarousel(currentSkillIndex);
+        scrollAmount += carousel.clientWidth / 2;
+        carousel.scrollTo({
+            top: 0,
+            left: scrollAmount,
+            behavior: 'smooth'
+        });
     });
 
-    updateSkillCarousel(currentSkillIndex);
+    prevBtn.addEventListener('click', () => {
+        scrollAmount -= carousel.clientWidth / 2;
+        carousel.scrollTo({
+            top: 0,
+            left: scrollAmount,
+            behavior: 'smooth'
+        });
+    });
+
+    // Initialize EmailJS with user ID
+    emailjs.init("your_user_id"); // Replace with your EmailJS user ID
+
+    // Handle form submission
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        // Send the form data using EmailJS
+        emailjs.sendForm('your_service_id', 'your_template_id', this) // Replace with your service ID and template ID
+            .then(function() {
+                alert('Your message has been sent successfully!');
+            }, function(error) {
+                alert('Failed to send the message. Please try again later.');
+            });
+    });
 });
