@@ -17,8 +17,8 @@ body, html {
 
 /* Dynamic Fading Header */
 .dynamic-header {
-    background: #78866B;
-    padding: 10px 0;
+    background: #78866B; /* Solid color from the palette */
+    padding: 10px 0; /* Smaller header */
     text-align: center;
     position: sticky;
     top: 0;
@@ -29,7 +29,7 @@ body, html {
 }
 
 .dynamic-header.scrolled {
-    background: rgba(120, 134, 107, 0.9);
+    background: rgba(120, 134, 107, 0.9); /* Fades to opaque using the primary color */
     box-shadow: none;
 }
 
@@ -40,21 +40,35 @@ body, html {
 }
 
 .dynamic-header .logo {
-    height: 60px; /* Increased size */
+    height: 60px; /* Adjusted logo size */
     width: 60px;
     border-radius: 50%;
 }
 
 .dynamic-header h1 {
     color: white;
-    font-size: 1.4em; /* Adjusted text size */
+    font-size: 1.5em; /* Adjusted text size */
     margin: 0;
 }
 
 .dynamic-header .greeting-message {
     color: #fff;
-    font-size: 1em; /* Adjusted greeting message size */
+    font-size: 0.9em; /* Smaller greeting message */
     margin-top: 5px;
+}
+
+.dynamic-header .utility-icons {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 1em;
+}
+
+.dynamic-header .utility-icons img {
+    height: 0; /* Hide icons */
+    width: 0;
 }
 
 /* Vertical Navigation */
@@ -77,7 +91,7 @@ body, html {
     display: inline-block;
     transition: background-color 0.3s, transform 0.3s;
     cursor: pointer;
-    position: relative;
+    position: relative; /* Required for positioning tooltip */
 }
 
 .vertical-nav .dot:hover {
@@ -98,13 +112,13 @@ body, html {
     border-radius: 6px;
     padding: 5px;
     position: absolute;
-    left: 20px;
+    left: 20px; /* Distance from the dot */
     top: 50%;
     transform: translateY(-50%);
     white-space: nowrap;
     z-index: 1;
     transition: opacity 0.3s;
-    pointer-events: none;
+    pointer-events: none; /* Prevent tooltips from blocking clicks */
 }
 
 .vertical-nav .dot:hover .tooltip,
@@ -115,7 +129,7 @@ body, html {
 
 /* Projects Carousel */
 .projects-carousel {
-    background: #A9BA9D;
+    background: #A9BA9D; /* Sage green */
     padding: 50px 0;
     display: flex;
     flex-direction: column;
@@ -125,18 +139,18 @@ body, html {
 .carousel-container {
     display: flex;
     align-items: center;
-    max-width: 1000px;
+    max-width: 1000px; /* Set max width */
     margin: 0 auto;
 }
 
 .detail-section {
-    width: 30%;
+    width: 30%; /* Takes 30% of the width */
     padding: 20px;
     color: #333;
 }
 
 .carousel {
-    width: 70%;
+    width: 70%; /* Takes 70% of the width */
     display: flex;
     overflow-x: scroll;
     gap: 20px;
@@ -146,7 +160,7 @@ body, html {
 
 .carousel-item {
     flex: 0 0 auto;
-    width: 300px;
+    width: 300px; /* Adjust the width as needed */
     scroll-snap-align: center;
     position: relative;
     transition: transform 0.3s;
@@ -185,7 +199,7 @@ body, html {
 
 /* Skills Carousel */
 .skills-carousel {
-    background: #B2BEB5;
+    background: #B2BEB5; /* Mint green */
     padding: 50px 0;
     text-align: center;
     display: flex;
@@ -195,28 +209,28 @@ body, html {
 
 .skills-carousel .carousel {
     display: flex;
-    overflow-x: hidden;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
     scroll-snap-type: x mandatory;
-    width: 600px;
+    width: 600px; /* Width to show two skills at a time */
     justify-content: center;
-    position: relative;
+    position: relative; /* For navigation button positioning */
 }
 
 .skill-item {
-    flex: 0 0 48%;
+    flex: 0 0 48%; /* Adjust to fit two items, with space between */
     scroll-snap-align: center;
     text-align: center;
-    border: 2px solid #fff;
+    border: 2px solid #fff; /* Polaroid border */
     background: #fff;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    margin: 0 10px;
+    margin: 0 10px; /* Margin for spacing */
 }
 
 .skill-item img {
-    width: 80px;
-    height: 80px;
+    width: 80px; /* Icon size */
+    height: 80px; /* Icon size */
     margin-bottom: 10px;
 }
 
@@ -229,7 +243,7 @@ body, html {
     margin-top: 20px;
     display: flex;
     justify-content: space-between;
-    width: 150px;
+    width: 150px; /* Width for button alignment */
 }
 
 .skills-carousel .slide-bar .prev-btn,
@@ -249,35 +263,41 @@ body, html {
     background: #555;
 }
 
-/* Resume Section */
-.resume-container {
-    text-align: center;
-    padding: 20px;
+/* Sections with New Color Scheme */
+section {
+    padding: 50px 20px; /* Reduced padding to reduce empty space */
+    min-height: 80vh; /* Adjusted minimum height */
+    transition: background-color 0.5s ease-in-out;
 }
 
-.download-link {
-    background: #333;
+.light-green {
+    background: #D0D9CD; /* Light green */
+}
+
+.sage-green {
+    background: #A9BA9D; /* Sage green */
+}
+
+.mint-green {
+    background: #B2BEB5; /* Mint green */
+}
+
+.grey-green {
+    background: #828E84; /* Grey green */
+}
+
+.dark-grey {
+    background: #687169; /* Dark grey */
     color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-    display: inline-block;
-    margin-bottom: 20px;
 }
 
-.download-link:hover {
-    background: #555;
+/* Placeholder content styling */
+section h1, section p {
+    text-align: center;
+    color: #333;
 }
 
-.resume-viewer {
-    width: 80%;
-    height: 600px;
-    border: none;
-    margin-top: 20px;
-}
-
-/* Contact Section */
+/* Contact Form Styles */
 .contact-container {
     display: flex;
     justify-content: center;
@@ -321,8 +341,8 @@ body, html {
     cursor: pointer;
     font-size: 1em;
     transition: background-color 0.3s;
-    align-self: center; /* Center align */
-    width: auto; /* Shrink button size */
+    width: 100px; /* Adjusted width to shrink the button */
+    align-self: center; /* Center the button */
 }
 
 .contact-container form .submit-btn:hover {
@@ -331,7 +351,7 @@ body, html {
 
 /* Footer */
 .footer {
-    background: #333;
+    background: #333; /* Dark color for footer */
     color: white;
     text-align: center;
     padding: 20px;
@@ -362,37 +382,4 @@ body, html {
 
 .footer .heart {
     color: red;
-}
-
-/* Sections with New Color Scheme */
-section {
-    padding: 50px 20px;
-    min-height: 50vh;
-    transition: background-color 0.5s ease-in-out;
-}
-
-.light-green {
-    background: #D0D9CD;
-}
-
-.sage-green {
-    background: #A9BA9D;
-}
-
-.mint-green {
-    background: #B2BEB5;
-}
-
-.grey-green {
-    background: #828E84;
-}
-
-.dark-grey {
-    background: #687169;
-    color: white;
-}
-
-section h1, section p {
-    text-align: center;
-    color: #333;
 }
