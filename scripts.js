@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Handle dynamic greeting based on time of day
     const greeting = document.getElementById('greeting');
     const hours = new Date().getHours();
 
@@ -11,7 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
         greeting.textContent = 'Good Evening!';
     }
 
-    // Handle vertical navigation scroll and active state
     const dots = document.querySelectorAll('.vertical-nav .dot');
     const sections = document.querySelectorAll('main section');
 
@@ -34,7 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
         dots.forEach(dot => dot.classList.remove('active'));
         dots[currentIndex].classList.add('active');
 
-        // Dynamic header background change on scroll
         const header = document.querySelector('.dynamic-header');
         if (window.scrollY > 50) {
             header.classList.add('scrolled');
@@ -43,7 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Handle carousel functionality for projects
     const carouselItems = document.querySelectorAll('.carousel-item');
     const projectTitle = document.getElementById('project-title');
     const projectDescription = document.getElementById('project-description');
@@ -70,7 +66,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Skills Carousel Navigation
     const skillItems = document.querySelectorAll('.skills-carousel .carousel .skill-item');
     const prevBtn = document.querySelector('.skills-carousel .slide-bar .prev-btn');
     const nextBtn = document.querySelector('.skills-carousel .slide-bar .next-btn');
@@ -92,6 +87,5 @@ document.addEventListener('DOMContentLoaded', () => {
         updateSkillCarousel(currentSkillIndex);
     });
 
-    // Initialize carousel display
     updateSkillCarousel(currentSkillIndex);
 });
