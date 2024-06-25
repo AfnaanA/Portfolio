@@ -44,22 +44,53 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Initialize SplideJS for the skills section
-    new Splide('#splide', {
-        type       : 'loop',
-        perPage    : 3,
-        perMove    : 1,
-        gap        : '1rem',
-        pagination : true,
-        autoplay   : true,
-        breakpoints: {
-            768: {
-                perPage: 1,
-            },
-            1024: {
-                perPage: 2,
-            },
-        },
-    }).mount();
-});
+    // Handle scroll up and down buttons
+    document.querySelector('.scroll-up').addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
 
+    document.querySelector('.scroll-down').addEventListener('click', () => {
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    });
+
+    // Handle carousel functionality for projects
+    const carouselItems = document.querySelectorAll('.projects-carousel .carousel-item');
+    const projectTitle = document.getElementById('project-title');
+    const projectDescription = document.getElementById('project-description');
+    const projectIndicators = document.querySelectorAll('.projects-carousel .slide-indicator');
+
+    carouselItems.forEach((item, index) => {
+        item.addEventListener('click', () => {
+            projectTitle.textContent = item.getAttribute('data-title');
+            projectDescription.textContent = item.getAttribute('data-description');
+            carouselItems.forEach(i => i.classList.remove('active'));
+            item.classList.add('active');
+            projectIndicators.forEach(i => i.classList.remove('active'));
+            projectIndicators[index].classList.add('active');
+        });
+    });
+
+    projectIndicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => {
+            carouselItems[index].scrollIntoView({ behavior: 'smooth', inline: 'center' });
+            carouselItems.forEach(i => i.classList.remove('active'));
+            carouselItems[index].classList.add('active');
+            projectIndicators.forEach(i => i.classList.remove('active'));
+            indicator.classList.add('active');
+        });
+    });
+
+    // Handle carousel functionality for skills
+    const skillItems = document.querySelectorAll('.skills-carousel .carousel-item');
+    const skillIndicators = document.querySelectorAll('.skills-carousel .slide-indicator');
+
+    skillIndicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => {
+            skillItems[index].scrollIntoView({ behavior: 'smooth', inline: 'center' });
+            skillItems.forEach(i => i.classList.remove('active'));
+            skillItems[index].classList.add('active');
+            skillIndicators.forEach(i => i.classList.remove('active'));
+            indicator.classList.add('active');
+        });
+    });
+});
