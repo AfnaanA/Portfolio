@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Afnan's Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- SplideJS CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.9/dist/css/splide.min.css">
 </head>
 <body>
     <!-- Dynamic Fading Header -->
@@ -19,6 +17,8 @@
         <div class="utility-icons">
             <a href="#contact" title="Contact"><img src="https://via.placeholder.com/20" alt="Contact"></a>
             <a href="#" title="Search"><img src="https://via.placeholder.com/20" alt="Search"></a>
+            <a href="#" class="scroll-up" title="Scroll Up"><img src="https://img.icons8.com/material-rounded/24/000000/up.png" alt="Scroll Up"></a>
+            <a href="#" class="scroll-down" title="Scroll Down"><img src="https://img.icons8.com/material-rounded/24/000000/down.png" alt="Scroll Down"></a>
         </div>
     </header>
 
@@ -42,12 +42,21 @@
     </aside>
 
     <!-- Main Content Sections -->
-    <main>
+    <main class="central-box">
+        <!-- About Section -->
         <section id="about" class="light-green">
-            <h1>About Me</h1>
-            <p>Contrary to popular belief, great opportunities don’t just rely on sheer luck...</p>
+            <h2>About Me</h2>
+            <div class="profile-pic-container">
+                <img src="https://via.placeholder.com/150" alt="Profile Picture" class="profile-pic">
+            </div>
+            <blockquote>
+                <p><strong>This is a blockquote following a header.</strong></p>
+                <p>When something is important enough, you do it even if the odds are not in your favor.</p>
+                <p>I am a passionate data scientist with a background in neuroscience and psychology. I specialize in machine learning, data visualization, and programming. I enjoy transforming data into actionable insights and developing innovative solutions to complex problems.</p>
+            </blockquote>
         </section>
 
+        <!-- Projects Section -->
         <section id="projects" class="projects-carousel">
             <h1>Projects</h1>
             <div class="carousel-container">
@@ -74,65 +83,142 @@
             </div>
         </section>
 
+        <!-- Skills Section -->
         <section id="skills" class="skills-carousel">
             <h1>Skills</h1>
-            <div id="splide" class="splide">
-                <div class="splide__track">
-                    <ul class="splide__list">
-                        <li class="splide__slide">
+            <div class="carousel-container">
+                <div class="carousel">
+                    <div class="carousel-item" data-index="0">
+                        <div class="content">
+                            <div class="number">01</div>
                             <img src="https://img.icons8.com/color/96/000000/combo-chart.png" alt="Data Visualization">
-                            <p>Data Visualization</p>
-                        </li>
-                        <li class="splide__slide">
+                            <h3>Data Visualization</h3>
+                            <p>Creating insightful and interactive visualizations using tools like Tableau and Power BI.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-index="1">
+                        <div class="content">
+                            <div class="number">02</div>
                             <img src="https://img.icons8.com/color/96/000000/artificial-intelligence.png" alt="Machine Learning">
-                            <p>Machine Learning</p>
-                        </li>
-                        <li class="splide__slide">
+                            <h3>Machine Learning</h3>
+                            <p>Developing and deploying machine learning models for predictive analytics.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-index="2">
+                        <div class="content">
+                            <div class="number">03</div>
                             <img src="https://img.icons8.com/color/96/000000/source-code.png" alt="Programming">
-                            <p>Programming</p>
-                        </li>
-                        <li class="splide__slide">
+                            <h3>Programming</h3>
+                            <p>Proficient in Python, SQL, and C++ for data analysis and software development.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-index="3">
+                        <div class="content">
+                            <div class="number">04</div>
                             <img src="https://img.icons8.com/color/96/000000/statistics.png" alt="Probability and Statistics">
-                            <p>Probability and Statistics</p>
-                        </li>
-                        <li class="splide__slide">
+                            <h3>Probability and Statistics</h3>
+                            <p>Analyzing data trends and making statistical inferences.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-index="4">
+                        <div class="content">
+                            <div class="number">05</div>
                             <img src="https://img.icons8.com/color/96/000000/neural-network.png" alt="Deep Learning">
-                            <p>Deep Learning</p>
-                        </li>
-                        <li class="splide__slide">
+                            <h3>Deep Learning</h3>
+                            <p>Designing and training deep neural networks for complex tasks.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-index="5">
+                        <div class="content">
+                            <div class="number">06</div>
                             <img src="https://img.icons8.com/color/96/000000/data-configuration.png" alt="Data Wrangling">
-                            <p>Data Wrangling</p>
-                        </li>
-                        <li class="splide__slide">
+                            <h3>Data Wrangling</h3>
+                            <p>Cleaning and preparing data for analysis.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-index="6">
+                        <div class="content">
+                            <div class="number">07</div>
                             <img src="https://img.icons8.com/color/96/000000/data-sheet.png" alt="Data Manipulation and Analysis">
-                            <p>Data Manipulation and Analysis</p>
-                        </li>
-                        <li class="splide__slide">
+                            <h3>Data Manipulation and Analysis</h3>
+                            <p>Transforming and analyzing large datasets.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-index="7">
+                        <div class="content">
+                            <div class="number">08</div>
                             <img src="https://img.icons8.com/color/96/000000/learning.png" alt="Curiosity and Lifelong Learning">
-                            <p>Curiosity and Lifelong Learning</p>
-                        </li>
-                        <li class="splide__slide">
+                            <h3>Curiosity and Lifelong Learning</h3>
+                            <p>Constantly seeking new knowledge and skills.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-index="8">
+                        <div class="content">
+                            <div class="number">09</div>
                             <img src="https://img.icons8.com/color/96/000000/scale.png" alt="Ethical Awareness">
-                            <p>Ethical Awareness</p>
-                        </li>
-                    </ul>
+                            <h3>Ethical Awareness</h3>
+                            <p>Understanding the ethical implications of technology.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-index="9">
+                        <div class="content">
+                            <div class="number">10</div>
+                            <img src="https://img.icons8.com/color/96/000000/project-management.png" alt="Project Management">
+                            <h3>Project Management</h3>
+                            <p>Managing projects efficiently from start to finish.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-bar">
+                    <div class="slide-indicator active" data-index="0"></div>
+                    <div class="slide-indicator" data-index="1"></div>
+                    <div class="slide-indicator" data-index="2"></div>
+                    <div class="slide-indicator" data-index="3"></div>
+                    <div class="slide-indicator" data-index="4"></div>
+                    <div class="slide-indicator" data-index="5"></div>
+                    <div class="slide-indicator" data-index="6"></div>
+                    <div class="slide-indicator" data-index="7"></div>
+                    <div class="slide-indicator" data-index="8"></div>
+                    <div class="slide-indicator" data-index="9"></div>
                 </div>
             </div>
         </section>
 
+        <!-- Resume Section -->
         <section id="resume" class="grey-green">
             <h1>Resume</h1>
-            <p>Resume Details...</p>
+            <p>Download my resume <a href="https://github.com/yourprofile/portfolio/raw/main/resume.pdf" target="_blank">here</a></p>
+            <iframe src="https://github.com/yourprofile/portfolio/raw/main/resume.pdf" width="100%" height="600px"></iframe>
         </section>
 
+        <!-- Contact Section -->
         <section id="contact" class="dark-grey">
             <h1>Contact Me</h1>
-            <p>Contact Details...</p>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+            <p>Email: your.email@example.com</p>
+            <p>LinkedIn: linkedin.com/in/yourprofile</p>
+            <p>Phone: +1234567890</p>
         </section>
     </main>
 
-    <!-- SplideJS JS -->
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.9/dist/js/splide.min.js"></script>
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2024 Afnan Abdullahi. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/yourprofile" title="LinkedIn"><img src="https://img.icons8.com/color/48/000000/linkedin.png" alt="LinkedIn"></a>
+            <a href="https://github.com/yourprofile" title="GitHub"><img src="https://img.icons8.com/color/48/000000/github.png" alt="GitHub"></a>
+        </div>
+    </footer>
+
     <script src="scripts.js"></script>
 </body>
 </html>
+
