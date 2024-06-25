@@ -6,13 +6,12 @@ body, html {
     scroll-behavior: smooth;
 }
 
-.container {
-    max-width: 1200px;
+.central-box {
+    max-width: 1000px;
     margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Dynamic Fading Header */
@@ -134,10 +133,53 @@ body, html {
     opacity: 1;
 }
 
+/* About Section */
+#about {
+    text-align: center;
+    padding: 40px 20px;
+    min-height: 60vh; /* Reduced minimum height */
+}
+
+#about h2 {
+    margin-bottom: 20px;
+}
+
+.profile-pic-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#about blockquote {
+    border-left: 5px solid #ccc;
+    margin: 20px 0;
+    padding: 10px 20px;
+    font-style: italic;
+    background: #f9f9f9;
+    position: relative;
+}
+
+#about blockquote p {
+    margin: 0;
+    padding: 10px 0;
+}
+
+#about blockquote p strong {
+    display: block;
+    margin-bottom: 10px;
+}
+
 /* Projects Carousel */
 .projects-carousel {
     background: #A9BA9D; /* Sage green */
-    padding: 50px 0;
+    padding: 40px 20px;
+    min-height: 60vh; /* Reduced minimum height */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -207,57 +249,165 @@ body, html {
 /* Skills Carousel */
 .skills-carousel {
     background: #B2BEB5; /* Mint green */
-    padding: 50px 0;
+    padding: 40px 20px;
+    min-height: 60vh; /* Reduced minimum height */
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.skills-carousel .carousel-container {
-    display: flex;
-    align-items: center;
-    max-width: 1000px; /* Set max width */
-    margin: 0 auto;
+.skills-carousel h1 {
+    margin-bottom: 20px;
 }
 
-.skills-carousel .detail-section {
-    width: 30%; /* Takes 30% of the width */
-    padding: 20px;
-    color: #333;
+.skills-carousel .carousel-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
 }
 
 .skills-carousel .carousel {
-    width: 70%; /* Takes 70% of the width */
     display: flex;
-    overflow-x: scroll;
-    gap: 20px;
-    padding: 20px;
-    scroll-snap-type: x mandatory;
+    overflow: hidden;
+    scroll-behavior: smooth;
 }
 
 .skills-carousel .carousel-item {
-    flex: 0 0 auto;
-    width: 300px; /* Adjust the width as needed */
-    scroll-snap-align: center;
-    position: relative;
-    transition: transform 0.3s;
-    cursor: pointer;
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
 }
 
-.skills-carousel .carousel-item:hover {
-    transform: scale(1.05);
-}
-
-.skills-carousel .carousel-item img {
-    width: 100%;
+.skills-carousel .content {
+    background: #fff;
+    padding: 40px 20px;
     border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 300px; /* Adjust width to make it more square */
+    margin: 0 auto;
+}
+
+.skills-carousel .number {
+    position: absolute;
+    top: -35px; /* Move the number further up */
+    right: -15px; /* Move the number further to the right */
+    font-size: 2em;
+    font-family: 'Georgia', serif;
+    color: #666;
+}
+
+.skills-carousel img {
+    width: 96px;
+    height: 96px;
+    margin-bottom: 10px;
+}
+
+.skills-carousel h3 {
+    margin: 10px 0;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.skills-carousel p {
+    margin: 10px 0 0;
+    font-size: 1em;
+    color: #666;
+}
+
+.skills-carousel .slide-bar {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.skills-carousel .slide-indicator {
+    height: 10px;
+    width: 10px;
+    background-color: #ddd;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.skills-carousel .slide-indicator.active {
+    background-color: #333;
+}
+
+/* Resume Section */
+#resume {
+    padding: 40px 20px;
+    min-height: 60vh; /* Reduced minimum height */
+}
+
+/* Contact Section */
+#contact {
+    padding: 40px 20px;
+    min-height: 60vh; /* Reduced minimum height */
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#contact label {
+    text-align: left;
+}
+
+#contact input, #contact textarea, #contact button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#contact button {
+    background-color: #78866B;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#contact button:hover {
+    background-color: #5b6b52;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #687169;
+    color: white;
+}
+
+.footer .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.footer .social-icons a img {
+    height: 24px;
+    width: 24px;
+    transition: transform 0.3s;
+}
+
+.footer .social-icons a img:hover {
+    transform: scale(1.1);
 }
 
 /* Sections with New Color Scheme */
 section {
-    padding: 100px 20px;
-    min-height: 100vh;
     transition: background-color 0.5s ease-in-out;
 }
 
