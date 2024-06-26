@@ -1,209 +1,323 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Afnan's Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <!-- Dynamic Fading Header -->
-    <header class="dynamic-header">
-        <div class="logo-container">
-            <img src="Profile_Pic.jpg" alt="Profile Picture" class="logo">
-            <h1>Afnan Abdullahi</h1>
+    <!-- Navigation Bar -->
+    <nav id="desktop-nav">
+        <div class="logo">Afnan Abdullahi</div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <nav id="hamburger-nav">
+        <div class="logo">Afnan Abdullahi</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+            </div>
         </div>
-        <p id="greeting" class="greeting-message"></p>
-        <div class="utility-icons">
-            <a href="#contact" title="Contact"><img src="https://via.placeholder.com/20" alt="Contact"></a>
-            <a href="#" title="Search"><img src="https://via.placeholder.com/20" alt="Search"></a>
-            <a href="#" class="scroll-up" title="Scroll Up"><img src="https://img.icons8.com/material-rounded/24/000000/up.png" alt="Scroll Up"></a>
-            <a href="#" class="scroll-down" title="Scroll Down"><img src="https://img.icons8.com/material-rounded/24/000000/down.png" alt="Scroll Down"></a>
-        </div>
-    </header>
+    </nav>
 
-    <!-- Vertical Navigation Bar -->
-    <aside class="vertical-nav">
-        <a href="#about" class="dot" title="About">
-            <span class="tooltip">About</span>
-        </a>
-        <a href="#projects" class="dot" title="Projects">
-            <span class="tooltip">Projects</span>
-        </a>
-        <a href="#skills" class="dot" title="Skills">
-            <span class="tooltip">Skills</span>
-        </a>
-        <a href="#contact" class="dot" title="Contact">
-            <span class="tooltip">Contact</span>
-        </a>
-    </aside>
-
-    <!-- Main Content Sections -->
-    <main class="central-box">
-        <!-- About Section -->
-        <section id="about" class="light-green">
-            <h2>About Me</h2>
+    <!-- Profile Section -->
+    <section id="profile">
+        <div class="profile-content">
             <div class="profile-pic-container">
-                <img src="Profile_Pic.jpg" alt="Profile Picture" class="profile-pic">
+                <img src="./assets/profile-pic.png" alt="Afnan Abdullahi profile picture" />
             </div>
-            <blockquote>
-                <p><strong>This is a blockquote following a header.</strong></p>
-                <p>When something is important enough, you do it even if the odds are not in your favor.</p>
-                <p>I am a passionate data scientist with a background in neuroscience and psychology. I specialize in machine learning, data visualization, and programming. I enjoy transforming data into actionable insights and developing innovative solutions to complex problems.</p>
-            </blockquote>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects" class="projects-carousel">
-            <h1>Projects</h1>
-            <div class="carousel-container">
-                <div class="detail-section">
-                    <h2 id="project-title">Select a Project</h2>
-                    <p id="project-description">Details about the selected project will appear here.</p>
+            <div class="profile-text">
+                <p class="hello-text">Hello, I'm</p>
+                <h1 class="name-title">Afnan Abdullahi</h1>
+                <p class="role-text">Data Scientist & Researcher</p>
+                <div class="btn-container">
+                    <button class="btn btn-color-2" onclick="window.open('./assets/resume-example.pdf')">Download CV</button>
+                    <button class="btn btn-color-1" onclick="location.href='#contact'">Contact Info</button>
                 </div>
-                <div class="carousel">
-                    <div class="carousel-item" data-title="Project 1" data-description="Details for Project 1">
-                        <img src="https://via.placeholder.com/600x400" alt="Project 1">
-                    </div>
-                    <div class="carousel-item" data-title="Project 2" data-description="Details for Project 2">
-                        <img src="https://via.placeholder.com/600x400" alt="Project 2">
-                    </div>
-                    <div class="carousel-item" data-title="Project 3" data-description="Details for Project 3">
-                        <img src="https://via.placeholder.com/600x400" alt="Project 3">
-                    </div>
+                <div class="social-icons">
+                    <i class="fab fa-linkedin icon" onclick="location.href='https://linkedin.com/'"></i>
+                    <i class="fab fa-github icon" onclick="location.href='https://github.com/'"></i>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Skills Section -->
-        <section id="skills" class="skills-carousel">
-            <h1>Skills</h1>
-            <div class="carousel-container">
-                <div class="carousel">
-                    <!-- Data Visualization -->
-                    <div class="carousel-item">
-                        <div class="content">
-                            <div class="number">01</div>
-                            <img src="https://img.icons8.com/color/96/000000/combo-chart.png" alt="Data Visualization">
-                            <h3>Data Visualization</h3>
-                            <p>Creating insightful and interactive visualizations using tools like Tableau and Power BI.</p>
-                        </div>
+    <!-- About Section -->
+    <section id="about" class="sage-green">
+        <p class="section__text__p1">Get To Know More</p>
+        <h1 class="title">About Me</h1>
+        <div class="section-container">
+            <div class="section__pic-container">
+                <img src="./assets/about-pic.png" alt="Profile picture" class="about-pic" />
+            </div>
+            <div class="about-details-container">
+                <div class="about-containers">
+                    <div class="details-container">
+                        <i class="fas fa-briefcase icon"></i>
+                        <h3>Experience</h3>
+                        <p>5+ years <br />Data Science</p>
                     </div>
-                    <!-- Machine Learning -->
-                    <div class="carousel-item">
-                        <div class="content">
-                            <div class="number">02</div>
-                            <img src="https://img.icons8.com/color/96/000000/artificial-intelligence.png" alt="Machine Learning">
-                            <h3>Machine Learning</h3>
-                            <p>Developing and deploying machine learning models for predictive analytics.</p>
-                        </div>
+                    <div class="details-container">
+                        <i class="fas fa-graduation-cap icon"></i>
+                        <h3>Education</h3>
+                        <p>B.Sc. Neuroscience<br />M.Sc. Data Science</p>
                     </div>
-                    <!-- Programming -->
-                    <div class="carousel-item">
-                        <div class="content">
-                            <div class="number">03</div>
-                            <img src="https://img.icons8.com/color/96/000000/source-code.png" alt="Programming">
-                            <h3>Programming</h3>
-                            <p>Proficient in Python, SQL, and C++ for data analysis and software development.</p>
-                        </div>
+                </div>
+                <div class="text-container">
+                    <p>
+                        I am a passionate data scientist and researcher with a background in neuroscience and psychology. I specialize in machine learning, data visualization, and statistical analysis. I enjoy transforming data into actionable insights and developing innovative solutions to complex problems.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <i class="fas fa-arrow-down icon arrow" onclick="location.href='#experience'"></i>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="mint-green">
+        <p class="section__text__p1">Explore My</p>
+        <h1 class="title">Experience</h1>
+        <div class="experience-details-container">
+            <div class="about-containers">
+                <div class="details-container">
+                    <h2 class="experience-sub-title">Data Scientist and Operational Strategist</h2>
+                    <div class="article-container">
+                        <article>
+                            <i class="fas fa-check icon"></i>
+                            <div>
+                                <h3>PaySii (FinTech Startup)</h3>
+                                <p>May 2022 – Present</p>
+                                <p>Designed and developed comprehensive dashboards on PowerBI, presenting daily and monthly performance reports to the board, enhancing data-driven decision-making at the executive level.</p>
+                                <p>Led cross-functional analytics integration, improving user satisfaction and retention.</p>
+                                <p>Collaborated with cross-functional teams to integrate analytics findings into new app feature creation, boosting user satisfaction and retention rates.</p>
+                                <p>Conducted cohort analysis to evaluate customer retention and churn rates, utilizing Python and heatmaps.</p>
+                            </div>
+                        </article>
                     </div>
-                    <!-- Statistical Analysis -->
-                    <div class="carousel-item">
-                        <div class="content">
-                            <div class="number">04</div>
-                            <img src="https://img.icons8.com/color/96/000000/statistics.png" alt="Statistical Analysis">
-                            <h3>Statistical Analysis</h3>
-                            <p>Applying statistical techniques to derive insights from data.</p>
-                        </div>
+                </div>
+                <div class="details-container">
+                    <h2 class="experience-sub-title">Marketing Strategy Specialist</h2>
+                    <div class="article-container">
+                        <article>
+                            <i class="fas fa-check icon"></i>
+                            <div>
+                                <h3>GHA</h3>
+                                <p>December 2022 – November 2023</p>
+                                <p>Provided strategic marketing insights and conducted advanced qualitative research to refine campaign strategies, significantly increasing donor engagement.</p>
+                                <p>Collaborated with medical teams to facilitate the adoption of new technologies and software, enhancing overall operational efficiency and staff competency.</p>
+                                <p>Designed impactful marketing materials that successfully generated over $200,000 in funds, substantially supporting the organization's humanitarian missions.</p>
+                            </div>
+                        </article>
                     </div>
-                    <!-- Data Wrangling -->
-                    <div class="carousel-item">
-                        <div class="content">
-                            <div class="number">05</div>
-                            <img src="https://img.icons8.com/color/96/000000/data-configuration.png" alt="Data Wrangling">
-                            <h3>Data Wrangling</h3>
-                            <p>Cleaning and preparing data for analysis.</p>
-                        </div>
-                    </div>
-                    <!-- Big Data Technologies -->
-                    <div class="carousel-item">
-                        <div class="content">
-                            <div class="number">06</div>
-                            <img src="https://img.icons8.com/color/96/000000/big-data.png" alt="Big Data Technologies">
-                            <h3>Big Data Technologies</h3>
-                            <p>Utilizing frameworks like Hadoop and Spark for handling large datasets.</p>
-                        </div>
-                    </div>
-                    <!-- Artificial Intelligence -->
-                    <div class="carousel-item">
-                        <div class="content">
-                            <div class="number">07</div>
-                            <img src="https://img.icons8.com/color/96/000000/brain.png" alt="Artificial Intelligence">
-                            <h3>Artificial Intelligence</h3>
-                            <p>Implementing AI methods to automate complex tasks.</p>
-                        </div>
-                    </div>
-                    <!-- Predictive Analytics -->
-                    <div class="carousel-item">
-                        <div class="content">
-                            <div class="number">08</div>
-                            <img src="https://img.icons8.com/color/96/000000/line-chart.png" alt="Predictive Analytics">
-                            <h3>Predictive Analytics</h3>
-                            <p>Using historical data to predict future outcomes.</p>
-                        </div>
-                    </div>
-                    <!-- Natural Language Processing -->
-                    <div class="carousel-item">
-                        <div class="content">
-                            <div class="number">09</div>
-                            <img src="https://img.icons8.com/color/96/000000/natural-language-processing.png" alt="Natural Language Processing">
-                            <h3>Natural Language Processing</h3>
-                            <p>Processing and analyzing large amounts of natural language data.</p>
-                        </div>
-                    </div>
-                    <!-- Deep Learning -->
-                    <div class="carousel-item">
-                        <div class="content">
-                            <div class="number">10</div>
-                            <img src="https://img.icons8.com/color/96/000000/neural-network.png" alt="Deep Learning">
-                            <h3>Deep Learning</h3>
-                            <p>Designing and training deep neural networks for advanced pattern recognition.</p>
-                        </div>
+                </div>
+                <div class="details-container">
+                    <h2 class="experience-sub-title">Research Assistant</h2>
+                    <div class="article-container">
+                        <article>
+                            <i class="fas fa-check icon"></i>
+                            <div>
+                                <h3>Cognitive Neuroscience Lab, City, University of London</h3>
+                                <p>September 2019 – July 2021</p>
+                                <p>Worked closely with the research team to design and implement experiments that deepened our understanding of cognitive processes and their neural bases.</p>
+                                <p>Applied expertise in SPSS and statistical analysis to interpret behavioral data, driving new discoveries in cognitive neuroscience.</p>
+                                <p>Utilized Qualtrics for survey design and data collection, ensuring robust and comprehensive data acquisition for studies.</p>
+                                <p>Managed data cleansing to maintain the integrity and accuracy of datasets, crucial for research accuracy.</p>
+                            </div>
+                        </article>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+        <i class="fas fa-arrow-down icon arrow" onclick="location.href='#projects'"></i>
+    </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="dark-grey">
-            <h1>Contact Me</h1>
-            <form>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-                <button type="submit">Send</button>
-            </form>
-           
-            <p>Email: your.email@example.com</p>
-            <p>LinkedIn: linkedin.com/in/yourprofile</p>
-            <p>Phone: +1234567890</p>
-        </section>
-    </main>
+    <!-- Projects Section -->
+    <section id="projects" class="light-green">
+        <p class="section__text__p1">Browse My Recent</p>
+        <h1 class="title">Projects</h1>
+        <div class="experience-details-container">
+            <div class="about-containers">
+                <div class="details-container color-container">
+                    <div class="article-container">
+                        <img src="./assets/project-1.png" alt="Project 1" class="project-img" />
+                    </div>
+                    <h2 class="experience-sub-title project-title">Credit Card Fraud Detection</h2>
+                    <div class="btn-container">
+                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
+                            Github
+                        </button>
+                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
+                            Live Demo
+                        </button>
+                    </div>
+                    <p>Developed a high-accuracy machine learning model to detect fraudulent credit card transactions, achieving over 95% accuracy.</p>
+                </div>
+                <div class="details-container color-container">
+                    <div class="article-container">
+                        <img src="./assets/project-2.png" alt="Project 2" class="project-img" />
+                    </div>
+                    <h2 class="experience-sub-title project-title">Healthcare Networks for Stroke Prevention and Management</h2>
+                    <div class="btn-container">
+                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
+                            Github
+                        </button>
+                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
+                            Live Demo
+                        </button>
+                    </div>
+                    <p>Constructed and analyzed a healthcare interaction network to optimize stroke prevention and management strategies, utilizing patient data and predictive models.</p>
+                </div>
+            </div>
+        </div>
+        <i class="fas fa-arrow-down icon arrow" onclick="location.href='#contact'"></i>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="mint-green">
+        <h1>Skills</h1>
+        <div class="carousel-container">
+            <div class="carousel">
+                <!-- Data Visualization -->
+                <div class="carousel-item">
+                    <div class="content">
+                        <div class="number">01</div>
+                        <i class="fas fa-chart-bar icon"></i>
+                        <h3>Data Visualization</h3>
+                        <p>Creating insightful and interactive visualizations using tools like Tableau and Power BI.</p>
+                    </div>
+                </div>
+                <!-- Machine Learning -->
+                <div class="carousel-item">
+                    <div class="content">
+                        <div class="number">02</div>
+                        <i class="fas fa-robot icon"></i>
+                        <h3>Machine Learning</h3>
+                        <p>Developing and deploying machine learning models for predictive analytics.</p>
+                    </div}
+                </div>
+                <!-- Programming -->
+                <div class="carousel-item">
+                    <div class="content">
+                        <div class="number">03</div>
+                        <i class="fas fa-code icon"></i>
+                        <h3>Programming</h3>
+                        <p>Proficient in Python, SQL, and C++ for data analysis and software development.</p>
+                    </div>
+                </div>
+                <!-- Statistical Analysis -->
+                <div class="carousel-item">
+                    <div class="content">
+                        <div class="number">04</div>
+                        <i class="fas fa-chart-line icon"></i>
+                        <h3>Statistical Analysis</h3>
+                        <p>Applying statistical techniques to derive insights from data.</p>
+                    </div>
+                </div>
+                <!-- Data Wrangling -->
+                <div class="carousel-item">
+                    <div class="content">
+                        <div class="number">05</div>
+                        <i class="fas fa-database icon"></i>
+                        <h3>Data Wrangling</h3>
+                        <p>Cleaning and preparing data for analysis.</p>
+                    </div>
+                </div>
+                <!-- Big Data Technologies -->
+                <div class="carousel-item">
+                    <div class="content">
+                        <div class="number">06</div>
+                        <i class="fas fa-server icon"></i>
+                        <h3>Big Data Technologies</h3>
+                        <p>Utilizing frameworks like Hadoop and Spark for handling large datasets.</p>
+                    </div>
+                </div>
+                <!-- Artificial Intelligence -->
+                <div class="carousel-item">
+                    <div class="content">
+                        <div class="number">07</div>
+                        <i class="fas fa-brain icon"></i>
+                        <h3>Artificial Intelligence</h3>
+                        <p>Implementing AI methods to automate complex tasks.</p>
+                    </div>
+                </div>
+                <!-- Predictive Analytics -->
+                <div class="carousel-item">
+                    <div class="content">
+                        <div class="number">08</div>
+                        <i class="fas fa-chart-pie icon"></i>
+                        <h3>Predictive Analytics</h3>
+                        <p>Using historical data to predict future outcomes.</p>
+                    </div>
+                </div>
+                <!-- Natural Language Processing -->
+                <div class="carousel-item">
+                    <div class="content">
+                        <div class="number">09</div>
+                        <i class="fas fa-language icon"></i>
+                        <h3>Natural Language Processing</h3>
+                        <p>Processing and analyzing large amounts of natural language data.</p>
+                    </div>
+                </div>
+                <!-- Deep Learning -->
+                <div class="carousel-item">
+                    <div class="content">
+                        <div class="number">10</div>
+                        <i class="fas fa-network-wired icon"></i>
+                        <h3>Deep Learning</h3>
+                        <p>Designing and training deep neural networks for advanced pattern recognition.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="sage-green">
+        <p class="section__text__p1">Get in Touch</p>
+        <h1 class="title">Contact Me</h1>
+        <div class="contact-info-upper-container">
+            <div class="contact-info-container">
+                <i class="fas fa-envelope icon contact-icon email-icon"></i>
+                <p><a href="mailto:afnan.abdullahi375@gmail.com">afnan.abdullahi375@gmail.com</a></p>
+            </div>
+            <div class="contact-info-container">
+                <i class="fab fa-linkedin icon contact-icon"></i>
+                <p><a href="https://www.linkedin.com/in/afnanabdullahi/">LinkedIn</a></p>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <p>© 2024 Afnan Abdullahi. All rights reserved.</p>
-        <div class="social-icons">
-            <a href="https://www.linkedin.com/in/yourprofile" title="LinkedIn"><img src="https://img.icons8.com/color/48/000000/linkedin.png" alt="LinkedIn"></a>
-            <a href="https://github.com/yourprofile" title="GitHub"><img src="https://img.icons8.com/color/48/000000/github.png" alt="GitHub"></a>
-        </div>
+    <footer>
+        <nav>
+            <div class="nav-links-container">
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <p>© 2024 Afnan Abdullahi. All Rights Reserved.</p>
     </footer>
 
-    <!-- Include Splide JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Splide/3.6.9/splide.min.js"></script>
     <script src="scripts.js"></script>
 </body>
 </html>
