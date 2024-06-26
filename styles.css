@@ -225,27 +225,6 @@ body, html {
     border-radius: 10px;
 }
 
-/* Bottom Slide Bar */
-.slide-bar {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 20px;
-}
-
-.slide-indicator {
-    height: 10px;
-    width: 10px;
-    background-color: #ddd;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.slide-indicator.active {
-    background-color: #333;
-}
-
 /* Skills Carousel */
 .skills-carousel {
     background: #B2BEB5; /* Mint green */
@@ -269,16 +248,19 @@ body, html {
 
 .skills-carousel .carousel {
     display: flex;
-    overflow: hidden;
-    scroll-behavior: smooth;
+    overflow-x: scroll;
+    gap: 20px;
+    padding: 20px;
+    scroll-snap-type: x mandatory;
 }
 
 .skills-carousel .carousel-item {
-    min-width: 100%;
-    box-sizing: border-box;
-    padding: 20px;
-    text-align: center;
-    transition: transform 0.3s ease-in-out;
+    flex: 0 0 auto;
+    width: 300px; /* Adjust the width as needed */
+    scroll-snap-align: center;
+    position: relative;
+    transition: transform 0.3s;
+    cursor: pointer;
 }
 
 .skills-carousel .content {
@@ -319,32 +301,6 @@ body, html {
     margin: 10px 0 0;
     font-size: 1em;
     color: #666;
-}
-
-.skills-carousel .slide-bar {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 20px;
-}
-
-.skills-carousel .slide-indicator {
-    height: 10px;
-    width: 10px;
-    background-color: #ddd;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.skills-carousel .slide-indicator.active {
-    background-color: #333;
-}
-
-/* Resume Section */
-#resume {
-    padding: 40px 20px;
-    min-height: 60vh; /* Reduced minimum height */
 }
 
 /* Contact Section */
