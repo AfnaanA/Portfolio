@@ -364,20 +364,6 @@ section {
     margin: 0;
 }
 
-.proficiency-bar {
-    width: 100%;
-    background-color: #e0e0e0;
-    border-radius: 5px;
-    overflow: hidden;
-    margin-top: 5px;
-}
-
-.proficiency {
-    height: 10px;
-    background-color: #76c7c0;
-    border-radius: 5px;
-}
-
 /* PROJECTS SECTION */
 #projects {
     position: relative;
